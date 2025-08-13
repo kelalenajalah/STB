@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="bg-white shadow">
+     <ul class="flex space-x-8">
+    <!-- Menu dengan dropdown -->
+    <li class="relative group">
+      <a href="#"
+         class="py-2 block border-b-2 border-transparent group-hover:border-yellow-500 transition">
+        AKADEMIK
+      </a>
+
+      <!-- Dropdown -->
+      <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-200">
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Informatika</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Sistem Informasi</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kalender Akademik</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Download Dokumen</a></li>
+      </ul>
+    </li>
+
+    <!-- Menu biasa -->
+    <li><a href="#" class="py-2 block border-b-2 border-transparent hover:border-yellow-500 transition">PROFIL</a></li>
+    <li><a href="#" class="py-2 block border-b-2 border-transparent hover:border-yellow-500 transition">KEMAHASISWAAN</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <nav class="bg-white shadow p-4">
+  <ul class="flex space-x-8">
+    
+    <!-- Dropdown 1 -->
+    <li class="relative group">
+      <a href="#" class="py-2 block border-b-2 border-transparent group-hover:border-yellow-500 transition">
+        AKADEMIK
+      </a>
+      <ul class="absolute left-0 mt-2 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Informatika</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Sistem Informasi</a></li>
+      </ul>
+    </li>
+
+    <!-- Dropdown 2 -->
+    <li class="relative group">
+      <a href="#" class="py-2 block border-b-2 border-transparent group-hover:border-yellow-500 transition">
+        KEMAHASISWAAN
+      </a>
+      <ul class="absolute left-0 mt-2 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">UKM</a></li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Beasiswa</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="container">
+  <nav class="bg-white shadow p-4">
+  <ul class="flex space-x-8">
+    <!-- Menu utama -->
+    <li class="relative group">
+      <a href="#" class="py-2 block border-b-2 border-transparent group-hover:border-yellow-500 transition">
+        AKADEMIK
+      </a>
+
+      <!-- Dropdown ke bawah -->
+      <ul class="absolute left-0 mt-2 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+        <li class="relative group">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Informatika</a>
+
+          <!-- Submenu ke samping -->
+          <ul class="absolute top-0 left-full bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Kurikulum</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Dosen</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Lab</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Prodi Sistem Informasi</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<!-- referensi unnes -->
+<div class="container">
+  <nav class="bg-blue-900 text-white">
+  <div class="max-w-7xl mx-auto flex space-x-8 px-6">
+    <!-- Menu dengan Mega Menu -->
+    <div class="relative group">
+      <button class="py-4 px-2 hover:text-yellow-400">Campus Life</button>
+      
+      <!-- Mega Menu -->
+      <div class="absolute left-0 top-full bg-blue-900 w-[800px] p-6 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
+        <div class="grid grid-cols-4 gap-8">
+          
+          <!-- Kolom 1 -->
+          <div>
+            <h3 class="font-bold mb-2">Campus Life</h3>
+            <ul>
+              <li><a href="#" class="block hover:text-yellow-400">Student Life</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Residential Life</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Sports</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 2 -->
+          <div>
+            <h3 class="font-bold mb-2">Student Activities</h3>
+            <ul>
+              <li><a href="#" class="block hover:text-yellow-400">Organization</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Clubs & Communities</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Spiritual</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 3 -->
+          <div>
+            <h3 class="font-bold mb-2">Explore UNNES</h3>
+            <ul>
+              <li><a href="#" class="block hover:text-yellow-400">UNNES Facilities</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Housing & Dining</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Transportation</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">UNNES Library</a></li>
+            </ul>
+          </div>
+
+          <!-- Kolom 4 -->
+          <div>
+            <h3 class="font-bold mb-2">Explore Semarang</h3>
+            <ul>
+              <li><a href="#" class="block hover:text-yellow-400">Welcome to Semarang</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Accommodation</a></li>
+              <li><a href="#" class="block hover:text-yellow-400">Local Culture</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- percobaan hover -->
+<div class="container">
+  <nav class="relative flex gap-8 text-white bg-slate-900 px-6 py-3">
+  <!-- Garis underline -->
+  <span id="indicator" 
+        class="absolute bottom-0 h-[2px] bg-blue-500 transition-all duration-300"></span>
+
+  <a href="#" class="relative px-1" 
+     onmouseover="moveIndicator(this)">Home</a>
+  <a href="#" class="relative px-1" 
+     onmouseover="moveIndicator(this)">About</a>
+  <a href="#" class="relative px-1" 
+     onmouseover="moveIndicator(this)">Services</a>
+  <a href="#" class="relative px-1" 
+     onmouseover="moveIndicator(this)">Contact</a>
+</nav>
+
+<script>
+  const indicator = document.getElementById("indicator");
+
+  function moveIndicator(el) {
+    indicator.style.width = el.offsetWidth + "px";
+    indicator.style.left = el.offsetLeft + "px";
+  }
+
+  // Set posisi awal di menu pertama
+  window.addEventListener("load", () => {
+    const firstMenu = document.querySelector("nav a");
+    moveIndicator(firstMenu);
+  });
+</script>
+</div>
+</div>
+
+
+
+<!-- list seperti di website samsung -->
+ <div class="container">
+  <nav class="bg-white shadow relative z-50">
+  <ul class="flex gap-6 px-6 py-4">
+    <li>
+      <button onclick="openMenu('tv')" class="hover:text-blue-500">TV & AV</button>
+    </li>
+    <li>
+      <button onclick="openMenu('mobile')" class="hover:text-blue-500">Mobile</button>
+    </li>
+  </ul>
+</nav>
+
+<!-- Mega Menu -->
+<div id="menu-tv" 
+     class="fixed left-0 top-[64px] w-full bg-white shadow-lg opacity-0 invisible 
+            transition-all duration-300 translate-y-5 z-40">
+  <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6 p-6">
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>Neo QLED</p>
+    </div>
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>OLED</p>
+    </div>
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>QLED</p>
+    </div>
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>Crystal UHD</p>
+    </div>
+  </div>
+</div>
+
+<div id="menu-mobile" 
+     class="fixed left-0 top-[64px] w-full bg-white shadow-lg opacity-0 invisible 
+            transition-all duration-300 translate-y-5 z-40">
+  <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6 p-6">
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>Galaxy S</p>
+    </div>
+    <div class="text-center">
+      <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+      <p>Galaxy Z</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openMenu(menuId) {
+    // Tutup semua menu dulu
+    document.querySelectorAll("[id^='menu-']").forEach(menu => {
+      menu.classList.add("opacity-0", "invisible", "translate-y-5");
+      menu.classList.remove("opacity-100", "visible", "translate-y-0");
+    });
+    
+    // Buka menu yang dipilih
+    const menu = document.getElementById(`menu-${menuId}`);
+    menu.classList.remove("opacity-0", "invisible", "translate-y-5");
+    menu.classList.add("opacity-100", "visible", "translate-y-0");
+  }
+</script>
+ </div>
+
+<div>
+  <nav class="bg-white shadow relative z-50">
+  <ul class="flex gap-6 px-6 py-4">
+    <!-- Menu 1 -->
+    <li class="relative group">
+      <span class="cursor-pointer pb-1 border-b-2 border-transparent group-hover:border-blue-500 transition">TV & AV</span>
+      
+      <!-- Mega Menu -->
+      <div class="absolute left-0 top-full w-screen bg-white shadow-lg opacity-0 invisible translate-y-5 
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                  transition-all duration-300 ease-out">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6 p-6">
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>Neo QLED</p>
+          </div>
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>OLED</p>
+          </div>
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>QLED</p>
+          </div>
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>Crystal UHD</p>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Menu 2 -->
+    <li class="relative group">
+      <span class="cursor-pointer pb-1 border-b-2 border-transparent group-hover:border-blue-500 transition">Mobile</span>
+      
+      <!-- Mega Menu -->
+      <div class="absolute left-0 top-full w-screen bg-white shadow-lg opacity-0 invisible translate-y-5 
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 
+                  transition-all duration-300 ease-out">
+        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-6 p-6">
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>Galaxy S</p>
+          </div>
+          <div class="text-center">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-2">
+            <p>Galaxy Z</p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+</div>
+
+<!-- sumber inspirasi -->
+<div class="container">
+  I'll create a complete website with this navigation component as the foundation, building it into a full university program showcase page with responsive design. Here's the implementation:
+
+
+1. First, I'll create a complete HTML file with proper structure and Tailwind CSS
+2. Then enhance the navigation with actual program study items
+3. Add hero section and program cards
+4. Implement responsive behavior
+5. Ensure all accessibility and best practices are followed
+
+
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Programs - Excellence in Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .program-card:hover .program-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+            
+            .mobile-menu.active {
+                max-height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="https://placehold.co/150x50" alt="University Logo - Modern academic crest with book and torch iconography in gold and blue" class="h-8 w-auto">
+                    <span class="ml-2 text-xl font-bold hidden md:block">EduUniversity</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-white hover:text-blue-200 transition">Home</a>
+                    
+                    <div class="relative group">
+                        <a href="#" 
+                           class="relative inline-block text-white py-2
+                                  before:content-[''] before:absolute before:-bottom-1 before:left-1/2 
+                                  before:-translate-x-1/2 before:w-0 before:h-[4px] before:bg-white 
+                                  before:transition-all before:duration-300 hover:before:w-full">
+                            Programs
+                        </a>
+
+                        <div class="absolute left-0 top-full w-screen 
+                                    bg-white shadow-lg opacity-0 invisible translate-y-5
+                                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                                    transition-all duration-300 ease-out">
+                            <div class="max-w-7xl mx-auto grid grid-cols-3 gap-6 h-[400px] p-6">
+                                <div>
+                                    <h3 class="text-blue-900 font-bold text-lg mb-4">Undergraduate</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Computer Science</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Business Administration</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Mechanical Engineering</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Biomedical Sciences</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Architecture</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-blue-900 font-bold text-lg mb-4">Graduate</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">MBA - Business</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">MS - Data Science</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">PhD - Neuroscience</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">MFA - Creative Writing</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">MPH - Public Health</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-blue-900 font-bold text-lg mb-4">Professional</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Executive Education</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Certification Programs</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Professional Development</a></li>
+                                        <li><a href="#" class="text-gray-700 hover:text-blue-600 transition">Online Courses</a></li>
+                                    </ul>
+                                    <div class="mt-6">
+                                        <img src="https://placehold.co/300x150" alt="Group of diverse students studying together at library tables with laptops and books" class="rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="text-white hover:text-blue-200 transition">Admissions</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">Research</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">About</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-blue-800 px-4 pt-2 pb-4">
+                <div class="space-y-1">
+                    <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">Home</a>
+                    <div class="pt-2">
+                        <button class="flex items-center justify-between w-full text-white hover:bg-blue-700 px-3 py-2 rounded">
+                            <span>Programs</span>
+                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="pl-4 space-y-1 mt-1">
+                            <a href="#" class="block text-blue-200 hover:text-white px-3 py-1">Computer Science</a>
+                            <a href="#" class="block text-blue-200 hover:text-white px-3 py-1">Business</a>
+                            <a href="#" class="block text-blue-200 hover:text-white px-3 py-1">Engineering</a>
+                        </div>
+                    </div>
+                    <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">Admissions</a>
+                    <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">Research</a>
+                    <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">About</a>
+                    <a href="#" class="block text-white hover:bg-blue-700 px-3 py-2 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Discover Your Future With Our Programs</h1>
+                    <p class="text-xl text-blue-200 mb-8">World-class education for tomorrow's leaders. Choose from 120+ undergraduate and graduate programs across diverse fields.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition">Explore Programs</a>
+                        <a href="#" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">Apply Now</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <img src="https://placehold.co/600x400" alt="University campus quad with historic brick buildings, green lawns, and students walking with backpacks during golden hour" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Academic Programs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Browse our comprehensive range of degree programs designed to prepare you for success in your chosen field.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 program-card">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400" alt="Computer science students working in lab with multiple monitors showing code and 3D models" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 program-overlay transition duration-300 transform translate-y-4">
+                            <a href="#" class="text-white font-medium px-4 py-2 border-2 border-white rounded hover:bg-white hover:text-blue-900 transition">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Computer Science</h3>
+                        <p class="text-gray-600 mb-4">Learn cutting-edge technologies from industry experts and prepare for careers in software development, AI, and more.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-600">Undergraduate</span>
+                            <span class="text-sm text-gray-500">4 years</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 program-card">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400" alt="Business professionals in meeting room with charts and graphs on screens and documents on table" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 program-overlay transition duration-300 transform translate-y-4">
+                            <a href="#" class="text-white font-medium px-4 py-2 border-2 border-white rounded hover:bg-white hover:text-blue-900 transition">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">MBA Program</h3>
+                        <p class="text-gray-600 mb-4">Our AACSB-accredited program prepares leaders with strategic thinking and business acumen for the global marketplace.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-600">Graduate</span>
+                            <span class="text-sm text-gray-500">2 years</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 program-card">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400" alt="Medical students in lab coats using advanced diagnostic equipment in a modern hospital setting" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 program-overlay transition duration-300 transform translate-y-4">
+                            <a href="#" class="text-white font-medium px-4 py-2 border-2 border-white rounded hover:bg-white hover:text-blue-900 transition">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Medical Sciences</h3>
+                        <p class="text-gray-600 mb-4">Prepare for careers in medicine, research, and healthcare with our state-of-the-art facilities and clinical training.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-blue-600">Professional</span>
+                            <span class="text-sm text-gray-500">4+ years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-800 transition">View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-blue-900 mb-2">120+</div>
+                    <div class="text-gray-600">Degree Programs</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-blue-900 mb-2">94%</div
+            </div>
+
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIMIK Tunas Bangsa</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Menambahkan style dasar untuk body */
+        body {
+            background-color: #020617; /* bg-slate-950 */
+            color: #ffffff; /* text-white */
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-poppins">
+
+    <header class="fixed z-50 top-0 left-0 w-full bg-slate-950 border-b border-white/20 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3 text-lg">
+                
+                <div class="logo">
+                    <a href="#" class="flex items-center space-x-2">
+                        <span class="text-blue-500 font-extrabold text-xl leading-tight">STIMIK <br>
+                            <span class="text-white font-normal">Tunas Bangsa</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- program studi  -->
+                <nav>
+                    <ul class="flex items-center gap-10 p-6">
+                        <li class="relative group">
+                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                Program Studi
+                            </a>
+                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[700px] rounded-lg">
+                                <div class="p-6 flex grid-rows-4 gap-10">
+                                    <div class="">
+                                        <h3 class="font-bold pb-6">Sarjana (S1)</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">kalender Akademik</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2022/2023</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2023/2024</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Download Dokuem</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Fasillitas -->
+                        <li class="relative group">
+                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                Profile perguruan tinggi
+                            </a>
+                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[900px] rounded-lg">
+                                <div class="p-6 flex grid-rows-4 gap-10">
+                                    <div>
+                                        <h3 class="font-bold pb-6">fasilitas</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 1</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 2</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 3</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 4</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 5</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Download dokumen</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Program Unit Jaminan Mutu</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Pemutakhiran Dokumen Mutu</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Rapat Tinjauan Manajemen (RTM)</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Pelatihan & Workshop Budaya Mutu</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Pengembangan Sistem Penjaminan Mutu Berbasis IT</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Evaluasi Kepuasan Stakeholder</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Penguatan Tata Kelola dan Good Governance</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Pengembangan Inovasi & Best Practices Mutu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Kemahasiswaan -->
+                         <li class="relative group">
+                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                kemahasiswaan
+                            </a>
+                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[700px] rounded-lg">
+                                <div class="p-6 flex grid-rows-4 gap-10">
+                                    <div class="">
+                                        <h3 class="font-bold pb-6">Teacher studi</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi STB</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi Kemendiksaintel</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Alumni</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2023/2024</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2022/2023</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2024/2025</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Himpunan mahaasiwa</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                         <!-- Beasiswa -->
+                         <li class="relative group">
+                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                Beasisawa
+                            </a>
+                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[525px] rounded-lg">
+                                <div class="p-6 flex grid-rows-3 gap-10">
+                                    <div class="">
+                                        <h3 class="font-bold pb-6">KIP-k</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Kemedikbud</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">aspirasi</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">santri</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 1</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 2</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 3</a>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold pb-6">Atlet</h3>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">POPDA</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Kabupaten</a>
+                                        <a href="#" class="block pb-3 hover:text-blue-500">Nasional</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- login signin  -->
+                <div class="flex items-center space-x-4">
+                    <a href="./link/Signin.html" class="text-lg hover:text-blue-400 transition-colors">Sign in</a>
+                    <a href="./link/Login.html" class="bg-blue-500 hover:bg-blue-600 text-white text-lg font-medium px-5 py-2 rounded-full transition-colors">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-52 pb-40 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-semibold mb-8 leading-tight">
+                    Mau Jadi Ahli Teknologi? <br>
+                    <strong class="text-blue-400">STIMIK</strong> Jawabannya, Yuk Daftar!
+                </h1>
+                <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
+                    Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
+                </p>
+                <div class="flex justify-center items-center gap-5 mt-8">
+                    <button class="border-2 border-white p-3 px-6 rounded-full bg-white text-slate-950 font-bold hover:bg-slate-300 transition-colors">Daftar Sekarang</button>
+                    <button class="border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors"><i></i>Video Profile</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-4">
+            <div class="rel bg-sky-900 border border-slate-700 mx-auto rounded-3xl ">
+                <div class="relative flex items-center justify-center">        
+                    <img src="./img/Kalkulus.jpg" alt="Video preview" class="object-cover w-full rounded-3xl h-[700px]">
+                    <img src="./asset/Play.png" class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110">
+                </div>
+            </div>
+            <div class="py-4">
+                <div class="border border-slate-700 rounded-full p-4 mx-auto w-[1125px] flex flex-wrap gap-6 justify-center font-semibold shadow-sky-900/30 shadow-xl">
+                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                        <span class="relative z-10">Matematika Diskrit</span>
+                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    </button>
+                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                        <span class="relative z-10">AI & Machine Learning</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    </button>
+                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                        <span class="relative z-10">Web Development</span>
+                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    </button>
+                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                        <span class="relative z-10">Cyber Security</span>
+                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    </button>
+                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                        <span class="relative z-10">Mobile Programming</span>
+                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+            <section class="py-16">
+                <div class="mx-auto px-4">
+                    <div class="flex justify-around items-center flex-wrap gap-8 bg-white">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/NovaTech.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                        <img src="./asset/google.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                    </div>
+                </div>
+            </section>
+
+        <section class="bg-black py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-4">Himpunan Mahasiswa STIMIK Tunas Bangsa</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-12">
+                    Kembangkan soft skill, perluas jaringan, dan salurkan minat bakat Anda melalui berbagai organisasi kemahasiswaan yang aktif dan berprestasi.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    
+                    <!-- Sample card HIMA 1 -->
+                    <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2">BEM</h3>
+                        <p class="font-semibold text-blue-400 mb-4">Badan Eksekutif Mahasiswa</p>
+                        <p class="text-slate-300 mb-6 flex-grow">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi.</p>
+                        <a href="#" class="font-semibold text-white hover:text-blue-400 self-start">Baca Lebih Lanjut &rarr;</a>
+                    </div>
+                    
+                    <!-- Sample card HIMA 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 program-card">
+                        <div class="relative">
+                            <img src="https://placehold.co/600x400" alt="Medical students in lab coats using advanced diagnostic equipment in a modern hospital setting" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 program-overlay transition duration-300 transform translate-y-4">
+                                <a href="#" class="text-white font-medium px-4 py-2 border-2 border-white rounded hover:bg-white hover:text-blue-900 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Medical Sciences</h3>
+                            <p class="text-gray-600 mb-4">Prepare for careers in medicine, research, and healthcare with our state-of-the-art facilities and clinical training.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-blue-600">Professional</span>
+                                <span class="text-sm text-gray-500">4+ years</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl font-bold">Kenapa Harus Kuliah di STIMIK Tunas Bangsa?</h2>
+                        <p class="text-slate-300">Kami berkomitmen untuk mencetak lulusan yang kompeten, inovatif, dan siap bersaing di era digital. Temukan alasan mengapa kami adalah pilihan terbaik untuk masa depan Anda.</p>
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">Baca Selengkapnya...</a>
+
+                        <div class="space-y-4 pt-4">
+                            <div class="border-b border-slate-700 pb-4">
+                                <h3 class="text-xl font-semibold flex justify-between items-center">Program studi di kampus <span>+</span></h3>
+                            </div>
+                            <div class="border-b border-slate-700 pb-4">
+                                <h3 class="text-xl font-semibold flex justify-between items-center">Beasiswa KIP-K yang ada di STIMIK <span>+</span></h3>
+                            </div>
+                            <div class="border-b border-slate-700 pb-4">
+                                <h3 class="text-xl font-semibold flex justify-between items-center">Seminar dan Workshop Rutin <span>+</span></h3>
+                            </div>
+                            <div class="border-b border-slate-700 pb-4">
+                                <h3 class="text-xl font-semibold flex justify-between items-center">Cerita Sukses Para Alumni <span>+</span></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img src="https://placehold.co/600x600/1e293b/475569?text=Ilustrasi+Mahasiswa" alt="Gambar Ilustrasi Mahasiswa Berprestasi" class="rounded-2xl shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black border-t border-slate-800 py-10">
+        <div class="container mx-auto px-4 text-center text-slate-400">
+            <h1>Draft</h1>
+        </div>
+    </footer>
+
+</body>
+</html>
