@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STIMIK Tunas Bangsa</title>
-
+    <script src="/js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,220 +30,235 @@
             color: #ffffff; /* text-white */
             font-family: 'Poppins', sans-serif;
         }
+        /* Style untuk hamburger menu */
+        .hamburger-line {
+            width: 30px;
+            height: 2px;
+            margin: 6px 0;
+            background-color: white;
+            transition: 0.4s;
+        }
     </style>
 </head>
 <body class="font-poppins">
 
-    <header class="fixed z-50 top-0 left-0 w-full bg-slate-950 border-b border-white/20 shadow-lg">
+    <header class="fixed z-50 top-0 left-0 w-full bg-slate-950/80 backdrop-blur-sm border-b border-white/20 shadow-lg">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-3 text-lg">
+            <div class="flex justify-between items-center py-3 text-base md:text-lg">
                 
                 <div class="logo">
                     <a href="#" class="flex items-center space-x-2">
-                        <span class="text-blue-500 font-extrabold text-xl leading-tight">STIMIK <br>
+                        <span class="text-blue-500 font-extrabold text-lg md:text-xl leading-tight">STIMIK <br>
                             <span class="text-white font-normal">Tunas Bangsa</span>
                         </span>
                     </a>
                 </div>
 
-                <!-- program studi  -->
-                <nav>
-                    <ul class="flex items-center gap-10 p-6">
-                        <li class="relative group">
-                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                Program Studi
-                            </a>
-                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[700px] rounded-lg">
-                                <div class="p-6 flex grid-rows-4 gap-10">
-                                    <div class="">
-                                        <h3 class="font-bold pb-6">Sarjana (S1)</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">kalender Akademik</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2022/2023</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2023/2024</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Download Dokuem</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- Fasillitas -->
-                        <li class="relative group">
-                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                Profile perguruan tinggi
-                            </a>
-                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[900px] rounded-lg">
-                                <div class="p-6 flex grid-rows-4 gap-10">
-                                    <div>
-                                        <h3 class="font-bold pb-6">fasilitas</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 1</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 2</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 3</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 4</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Lab 5</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Download dokumen</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Program Unit Jaminan Mutu</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Pemutakhiran Dokumen Mutu</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Rapat Tinjauan Manajemen (RTM)</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Pelatihan & Workshop Budaya Mutu</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Pengembangan Sistem Penjaminan Mutu Berbasis IT</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Evaluasi Kepuasan Stakeholder</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Penguatan Tata Kelola dan Good Governance</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Pengembangan Inovasi & Best Practices Mutu</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- Kemahasiswaan -->
-                         <li class="relative group">
-                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                kemahasiswaan
-                            </a>
-                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[700px] rounded-lg">
-                                <div class="p-6 flex grid-rows-4 gap-10">
-                                    <div class="">
-                                        <h3 class="font-bold pb-6">Teacher studi</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi STB</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi Kemendiksaintel</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Alumni</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2023/2024</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2022/2023</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2024/2025</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Himpunan mahaasiwa</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                         <!-- Beasiswa -->
-                         <li class="relative group">
-                            <a href="#" class="relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                Beasisawa
-                            </a>
-                            <div class="absolute top-full mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-[525px] rounded-lg">
-                                <div class="p-6 flex grid-rows-3 gap-10">
-                                    <div class="">
-                                        <h3 class="font-bold pb-6">KIP-k</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Kemedikbud</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">aspirasi</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">santri</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 1</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 2</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 3</a>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold pb-6">Atlet</h3>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">POPDA</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Kabupaten</a>
-                                        <a href="#" class="block pb-3 hover:text-blue-500">Nasional</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <!-- login signin  -->
-                <div class="flex items-center space-x-4">
-                    <a href="./link/Signin.html" class="text-lg hover:text-blue-400 transition-colors">Sign in</a>
-                    <a href="./link/Login.html">
-                        <button class="relative border border-white/20 rounded-full overflow-hidden bg-gray-800 hover:text-slate-800 group p-2 px-6">
-                        <span class="relative z-10 group-hover:text-black">Login</span>
-                         <span class="absolute inset-0 bg-white text-black translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                <!-- Tombol Hamburger untuk mobile -->
+                <div class="lg:hidden">
+                    <button id="hamburger" class="focus:outline-none">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
                     </button>
-                    </a>
                 </div>
+
+                <!-- Menu Navigasi -->
+                <div id="nav-menu" class="hidden absolute lg:relative top-full left-0 w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto">
+                    <nav class="w-full lg:w-auto">
+                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-0">
+                            <!-- program studi  -->
+                            <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Program Studi
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Sarjana (S1)</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">kalender Akademik</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2022/2023</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2023/2024</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Download Dokumen</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Profile perguruan tinggi -->
+                            <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Profile perguruan tinggi
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[900px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">fasilitas</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 1</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 2</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 3</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 4</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 5</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Download dokumen</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Program Unit Jaminan Mutu</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Kemahasiswaan -->
+                             <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    kemahasiswaan
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Teacher studi</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi STB</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi Kemendiksaintel</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Alumni</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2023/2024</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2022/2023</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2024/2025</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Himpunan mahaasiwa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                             <!-- Beasiswa -->
+                             <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Beasisawa
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[525px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">KIP-k</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kemedikbud</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">aspirasi</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">santri</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 1</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 2</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 3</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Atlet</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">POPDA</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kabupaten</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Nasional</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- login signin -->
+                    <div class="flex flex-col lg:flex-row items-center gap-4 p-6 lg:p-0 lg:space-x-4">
+                        <a href="./link/Signin.html" class="text-lg hover:text-blue-400 transition-colors w-full lg:w-auto text-center">Sign in</a>
+                        <a href="./link/Login.html" class="w-full lg:w-auto">
+                            <button class="w-full relative border border-white/20 rounded-full overflow-hidden bg-gray-800 hover:text-slate-800 group p-2 px-6">
+                                <span class="relative z-10 group-hover:text-black">Login</span>
+                                <span class="absolute inset-0 bg-white text-black translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>
 
     <main>
-        <section class="pt-52 pb-40 text-center">
+        <section class="pt-32 sm:pt-40 md:pt-52 pb-20 sm:pb-32 md:pb-40 text-center">
             <div class="container mx-auto px-4">
-                <h1 class="text-5xl md:text-7xl font-semibold mb-8 leading-tight">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 md:mb-8 leading-tight">
                     Mau Jadi Ahli Teknologi? <br>
                     <strong class="text-blue-400">STIMIK</strong> Jawabannya, Yuk Daftar!
                 </h1>
-                <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-10">
+                <p class="text-base sm:text-lg text-slate-300 max-w-md sm:max-w-xl md:max-w-3xl mx-auto mb-8 md:mb-10">
                     Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
                 </p>
-                <div class="flex justify-center items-center gap-6 ">
-                    <button class="relative border border-white/20 rounded-full p-3 px-4 overflow-hidden bg-gray-800 hover:text-slate-800 group">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 ">
+                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-4 overflow-hidden bg-gray-800 hover:text-slate-800 group">
                         <span class="relative z-10 group-hover:text-white">Daftar Sekarang</span>
                          <span class="absolute inset-0 bg-blue-600 text-white translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors"><i></i>&#11208; Video Profile</button
+                    <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors"><i></i>&#11208; Video Profile</button>
                 </div>
             </div>
         </section>
 
         <section class="container mx-auto px-4">
-            <div class="rel bg-sky-900 border border-slate-700 mx-auto rounded-3xl ">
+            <div class="relative bg-sky-900 border border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
                 <div class="relative flex items-center justify-center">        
-                    <img src="./img/Kalkulus.jpg" alt="Video preview" class="object-cover w-full rounded-3xl h-[700px]">
-                    <img src="./asset/Play.png" class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110">
+                    <img src="/img/Kalkulus.jpg" alt="Video preview" class="object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">
+                    <img src="./asset/Play.png" class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
                 </div>
             </div>
             <div class="py-5">
-                <div class="border border-slate-700 bg-slate-900/25 rounded-full p-4 mx-auto w-[1125px] flex flex-wrap gap-6 justify-center font-semibold shadow-sky-900/40]
-">
-                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                <div class="rounded-full p-4 mx-auto w-full max-w-6xl flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center font-semibold shadow-sky-900/40">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
                         <span class="relative z-10">Matematika Diskrit</span>
                          <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
                         <span class="relative z-10">AI & Machine Learning</span>
                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
                         <span class="relative z-10">Web Development</span>
                          <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
                         <span class="relative z-10">Cyber Security</span>
                          <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-3 px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
                         <span class="relative z-10">Mobile Programming</span>
                          <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
                     </button>
                 </div>
             </div>
         </section>
+
+        <!-- logo sponsor -->
             <section class="">
-                    <div class="flex justify-around items-center flex-wrap gap-8 bg-white/5 py-16 mt-8"> logo Sponsor
-                        <!-- <img src="./asset/adidas.png" alt="Logo Sponsor 1" class=" w-[100px]">
+                    <div class="flex items-center justify-center gap-20 bg-white py-2 mt-8">
+                        <img src="./asset/adidas.png" alt="Logo Sponsor 1" class=" w-[100px]">
                         <img src="./asset/bear.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
                         <img src="./asset/disney.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
                         <img src="./asset/gillet.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
@@ -253,194 +268,133 @@
                         <img src="./asset/polpo.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
                         <img src="./asset/tiger.png" alt="Logo Sponsor 1" class=" w-[100px]">
                         <img src="./asset/under.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                    </div> -->
+                    </div>
             </section>
 
-        <section class="bg-black py-20">
-            <div class="container mx-auto items-center text-center">
-                <h2 class="text-4xl font-bold mb-8">Himpunan Mahasiswa <span class="border-b-2">STIMIK Tunas Bangsa</span></h2>
-                <p class="text-slate-400 mx-auto mb-12">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe velit rerum odio. Unde repudiandae odit doloribus debitis atque doloremque perspiciatis iusto illum veniam iure fuga fugiat voluptatum dicta, corporis ab modi nobis, exercitationem labore ratione, dignissimos mollitia in tempore! Doloremque quis cum in repellendus eos, amet, vitae soluta obcaecati, tempora minima ad a quas maiores iusto. Expedita excepturi quod voluptate quam. Architecto quibusdam reiciendis nam illo distinctio similique mollitia deserunt. Aliquam et corporis voluptatum est!
+        <section class="bg-black py-16 md:py-20">
+            <div class="container mx-auto px-4 items-center text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Himpunan Mahasiswa <span class="border-b-2">STIMIK Tunas Bangsa</span></h2>
+                <p class="text-slate-400 max-w-3xl mx-auto mb-12">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe velit rerum odio. Unde repudiandae odit doloribus debitis atque doloremque perspiciatis iusto illum veniam iure fuga fugiat voluptatum dicta, corporis ab modi nobis, exercitationem labore ratione, dignissimos mollitia in tempore!
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 text-left">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left">
                     
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
+                    <!-- Kartu Himpunan -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=BEM" alt="Logo BEM" class="w-full h-full object-cover">
+                        </div>
                         <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                        <p class="font-bold pb-4 flex-grow">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
 
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
+                    <!-- Duplikat kartu untuk contoh -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">HMTIKA</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA" alt="Logo HMTIKA" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Teknik Informatika</p>
+                        <p class="font-bold pb-4 flex-grow">Mengembangkan potensi mahasiswa Informatika melalui kegiatan akademik dan non-akademik.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">HIMASI</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=HIMASI" alt="Logo HIMASI" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Sistem Informasi</p>
+                        <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
+                    
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">UKM Koding</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+Koding" alt="Logo UKM Koding" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
+                        <p class="font-bold pb-4 flex-grow">Komunitas bagi para mahasiswa yang tertarik pada dunia pemrograman dan pengembangan software.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">UKM Desain</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+Desain" alt="Logo UKM Desain" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
+                        <p class="font-bold pb-4 flex-grow">Mewadahi kreativitas mahasiswa di bidang desain grafis, UI/UX, dan multimedia.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
+                    
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">UKM E-Sport</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+E-Sport" alt="Logo UKM E-Sport" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
+                        <p class="font-bold pb-4 flex-grow">Mengasah bakat dan strategi mahasiswa dalam kompetisi game elektronik tingkat regional dan nasional.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    <!-- Sample card BEM -->
-                    <div class="bg-black h-[500px] w-[520px] p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-4">
-                        <h3 class="text-xl font-bold">BEM</h3>
-                    <div class="container my-7 rounded-xl overflow-hidden">
-                        <img src="https://i.pinimg.com/1200x/35/e6/c5/35e6c5bacc47c7c3643b84cf25b4347a.jpg" alt="Logo" class="w-full h-full object-cover object-[-30px_center]">
-                    </div>
-                        <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
-                        <p class="font-bold pb-4">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="#" class="font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-
+                    
                 </div>
             </div>
         </section>
 
         <section class="py-20 bg-slate-900 text-white">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <!-- Bagian Kiri -->
-            <div class="space-y-8">
-                <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
-                    Kenapa Harus Kuliah di <span class="text-blue-400">STIMIK Tunas Bangsa?</span>
-                </h2>
-                <p class="text-slate-400 max-w-lg leading-relaxed">
-                    Kami berkomitmen untuk mencetak lulusan yang kompeten, inovatif, dan siap bersaing di era digital.
-                    Temukan alasan mengapa kami adalah pilihan terbaik untuk masa depan Anda.
-                </p>
-                <a href="#"
-                   class="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold shadow-md transition-all duration-300">
-                    Baca Selengkapnya
-                </a>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                <!-- Bagian Kiri -->
+                <div class="space-y-8">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
+                        Kenapa Harus Kuliah di <span class="text-blue-400">STIMIK Tunas Bangsa?</span>
+                    </h2>
+                    <p class="text-slate-400 max-w-lg leading-relaxed">
+                        Kami berkomitmen untuk mencetak lulusan yang kompeten, inovatif, dan siap bersaing di era digital.
+                        Temukan alasan mengapa kami adalah pilihan terbaik untuk masa depan Anda.
+                    </p>
+                    <a href="#"
+                    class="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold shadow-md transition-all duration-300">
+                        Baca Selengkapnya
+                    </a>
 
-                <!-- Accordion Info -->
-                <div class="space-y-4 pt-6">
-                    <div class="border-b border-white/25 p-4">
-                        <h3 class="text-lg font-semibold flex justify-between items-center">
-                            Program Studi di Kampus <span class="text-blue-400">+</span>
-                        </h3>
+                    <!-- Accordion Info -->
+                    <div class="space-y-4 pt-6">
+                        <div class="border-b border-white/25 p-4">
+                            <h3 class="text-lg font-semibold flex justify-between items-center">
+                                Program Studi di Kampus <span class="text-blue-400">+</span>
+                            </h3>
+                        </div>
+                        <div class="border-b border-white/25 p-4">
+                            <h3 class="text-lg font-semibold flex justify-between items-center">
+                                Beasiswa KIP-K yang Ada di STIMIK <span class="text-blue-400">+</span>
+                            </h3>
+                        </div>
+                        <div class="border-b border-white/25 p-4">
+                            <h3 class="text-lg font-semibold flex justify-between items-center">
+                                Seminar dan Workshop Rutin <span class="text-blue-400">+</span>
+                            </h3>
+                        </div>
+                        <div class="border-b border-white/25 p-4">
+                            <h3 class="text-lg font-semibold flex justify-between items-center">
+                                Cerita Sukses Para Alumni <span class="text-blue-400">+</span>
+                            </h3>
+                        </div>
                     </div>
-                    <div class="border-b border-white/25 p-4">
-                        <h3 class="text-lg font-semibold flex justify-between items-center">
-                            Beasiswa KIP-K yang Ada di STIMIK <span class="text-blue-400">+</span>
-                        </h3>
-                    </div>
-                    <div class="border-b border-white/25 p-4">
-                        <h3 class="text-lg font-semibold flex justify-between items-center">
-                            Seminar dan Workshop Rutin <span class="text-blue-400">+</span>
-                        </h3>
-                    </div>
-                    <div class="border-b border-white/25 p-4">
-                        <h3 class="text-lg font-semibold flex justify-between items-center">
-                            Cerita Sukses Para Alumni <span class="text-blue-400">+</span>
-                        </h3>
+                </div>
+                    <!-- Bagian Kanan (Placeholder, bisa diisi gambar atau konten lain) -->
+                    <div class="hidden lg:block">
+                         <img src="https://placehold.co/600x400/1e293b/3b82f6?text=Kampus+Modern" alt="Gedung Kampus" class="rounded-lg shadow-2xl">
                     </div>
                 </div>
             </div>
-
-            <!-- Bagian Kanan (Opsi Gambar) -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                <img src="https://i.pinimg.com/736x/b3/90/5d/b3905d8c0eff3c7e30214fdd12703502.jpg"
-                     alt="Mahasiswa 1"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-
-                <img src="https://i.pinimg.com/736x/68/29/dd/6829dd9dacf9e4db11e5dd55875f8f73.jpg"
-                     alt="Mahasiswa 2"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-
-                <img src="https://i.pinimg.com/736x/82/4b/11/824b11f58f16df07703eca4d60f06ec2.jpg"
-                     alt="Mahasiswa 3"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-
-                <img src="https://i.pinimg.com/736x/ad/7e/e9/ad7ee9180f75e91da564effc27607b49.jpg"
-                     alt="Mahasiswa 4"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-
-                <img src="https://i.pinimg.com/736x/08/40/d0/0840d0fc6d1a07ed4a31cbde25b7883a.jpg"
-                     alt="Mahasiswa 5"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-
-                <img src="https://i.pinimg.com/736x/65/e5/cd/65e5cdfb68b4d96f9b2e8cd0479b8131.jpg"
-                     alt="Mahasiswa 6"
-                     class="rounded-xl shadow-lg object-cover object-center w-[300px] h-[400px] mx-auto transition-transform duration-500 hover:scale-105 cursor-pointer">
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
     </main>
-
-    <footer class="bg-black border-t border-slate-800 py-10">
-        <div class="container mx-auto px-4 text-center text-slate-400">
-            <h1 class="text-xl font-normal text-white">Draft Incomeing <span class="font-semibold">(Berita tantang kampus)</span></h1>
-        </div>
-    </footer>
-
 </body>
 </html>
