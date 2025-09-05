@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STIMIK Tunas Bangsa</title>
-    <script src="/js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script>
+        // Custom Tailwind CSS configuration
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         poppins: ['Poppins', 'sans-serif'],
+                    },
+                    keyframes: {
+                        scroll: {
+                           '0%': { transform: 'translateX(0)' },
+                           '100%': { transform: 'translateX(-100%)' },
+                        }
+                    },
+                    animation: {
+                        scroll: 'scroll 40s linear infinite',
                     }
                 }
             }
@@ -24,13 +33,14 @@
     </script>
 
     <style>
-        /* Menambahkan style dasar untuk body */
+        /* Base styles for the body */
         body {
             background-color: #020617; /* bg-slate-950 */
             color: #ffffff; /* text-white */
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
-        /* Style untuk hamburger menu */
+        /* Styles for the hamburger menu icon */
         .hamburger-line {
             width: 30px;
             height: 2px;
@@ -38,14 +48,26 @@
             background-color: white;
             transition: 0.4s;
         }
+        /* Animation for the hamburger icon when active */
+        .hamburger-active > span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-active > span:nth-child(2) {
+            transform: scaleX(0);
+        }
+        .hamburger-active > span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
     </style>
 </head>
 <body class="font-poppins">
 
+    <!-- Header Section -->
     <header class="fixed z-50 top-0 left-0 w-full bg-slate-950/80 backdrop-blur-sm border-b border-white/20 shadow-lg">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-3 text-base md:text-lg">
                 
+                <!-- Logo -->
                 <div class="logo">
                     <a href="#" class="flex items-center space-x-2">
                         <span class="text-blue-500 font-extrabold text-lg md:text-xl leading-tight">STIMIK <br>
@@ -54,73 +76,72 @@
                     </a>
                 </div>
 
-                <!-- Tombol Hamburger untuk mobile -->
+                <!-- Hamburger Button for mobile -->
                 <div class="lg:hidden">
-                    <button id="hamburger" class="focus:outline-none">
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4">
+                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
                     </button>
                 </div>
 
-                <!-- Menu Navigasi -->
+                <!-- Navigation Menu -->
                 <div id="nav-menu" class="hidden absolute lg:relative top-full left-0 w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto">
                     <nav class="w-full lg:w-auto">
                         <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-0">
-                            <!-- program studi  -->
+                            <!-- Program Studi Dropdown -->
                             <li class="relative group w-full lg:w-auto">
                                 <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
                                     Program Studi
                                 </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
                                     <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
                                         <div>
                                             <h3 class="font-bold pb-6">Sarjana (S1)</h3>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
                                         </div>
                                         <div>
-                                            <h3 class="font-bold pb-6">kalender Akademik</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2022/2023</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2023/2024</a>
+                                            <h3 class="font-bold pb-6">Kalender Akademik</h3>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2025/2026</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2026/2027</a>
                                         </div>
                                         <div>
                                             <h3 class="font-bold pb-6">Download Dokumen</h3>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmiah</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skripsi</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
 
-                            <!-- Profile perguruan tinggi -->
+                            <!-- Profile Perguruan Tinggi Dropdown -->
                             <li class="relative group w-full lg:w-auto">
                                 <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Profile perguruan tinggi
+                                    Profil
                                 </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[900px] rounded-lg">
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[900px] rounded-lg">
                                     <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
                                         <div>
-                                            <h3 class="font-bold pb-6">fasilitas</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 1</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 2</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 3</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 4</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lab 5</a>
+                                            <h3 class="font-bold pb-6">Fasilitas</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Laboratorium Komputer</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Perpustakaan Digital</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Ruang Kelas Multimedia</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Koneksi Internet Cepat</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kantin Modern</a>
                                         </div>
                                         <div>
-                                            <h3 class="font-bold pb-6">Download dokumen</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmilah</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skipsi</a>
+                                            <h3 class="font-bold pb-6">Tentang Kampus</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Sejarah Singkat</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Visi & Misi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Struktur Organisasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kontak Kami</a>
                                         </div>
                                         <div>
-                                            <h3 class="font-bold pb-6">Program Unit Jaminan Mutu</h3>
+                                            <h3 class="font-bold pb-6">Unit Jaminan Mutu</h3>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
                                             <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
@@ -129,26 +150,26 @@
                                 </div>
                             </li>
 
-                            <!-- Kemahasiswaan -->
+                             <!-- Kemahasiswaan Dropdown -->
                              <li class="relative group w-full lg:w-auto">
                                 <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    kemahasiswaan
+                                    Kemahasiswaan
                                 </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
                                     <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
                                         <div>
-                                            <h3 class="font-bold pb-6">Teacher studi</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi STB</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Teacher studi Kemendiksaintel</a>
+                                            <h3 class="font-bold pb-6">Info Beasiswa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Internal STB</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Kemendikbud</a>
                                         </div>
                                         <div>
                                             <h3 class="font-bold pb-6">Alumni</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2023/2024</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2022/2023</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Alumi tahun Angkatan 2024/2025</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tracer Study</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Ikatan Alumni</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lowongan Kerja</a>
                                         </div>
                                         <div>
-                                            <h3 class="font-bold pb-6">Himpunan mahaasiwa</h3>
+                                            <h3 class="font-bold pb-6">Himpunan Mahasiswa</h3>
                                             <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
                                             <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
                                         </div>
@@ -156,43 +177,22 @@
                                 </div>
                             </li>
 
-                             <!-- Beasiswa -->
-                             <li class="relative group w-full lg:w-auto">
+                            <!-- Beasiswa -->
+                            <li class="w-full lg:w-auto">
                                 <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Beasisawa
+                                    Beasiswa
                                 </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[525px] rounded-lg">
-                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-                                        <div>
-                                            <h3 class="font-bold pb-6">KIP-k</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Kemedikbud</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">aspirasi</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">santri</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 1</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 2</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Hafis Al-Quran 3</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Atlet</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">POPDA</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Kabupaten</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Nasional</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                         </ul>
                     </nav>
                     
-                    <!-- login signin -->
-                    <div class="flex flex-col lg:flex-row items-center gap-4 p-6 lg:p-0 lg:space-x-4">
-                        <a href="./link/Signin.html" class="text-lg hover:text-blue-400 transition-colors w-full lg:w-auto text-center">Sign in</a>
-                        <a href="./link/Login.html" class="w-full lg:w-auto">
+                    <!-- Login/Signin Buttons -->
+                    <div class="flex flex-col lg:flex-row items-center gap-4 p-6 lg:p-0 lg:ml-6 lg:space-x-4">
+                        <a href="#" class="text-lg hover:text-blue-400 transition-colors w-full lg:w-auto text-center">Sign in</a>
+                        <a href="#" class="w-full lg:w-auto">
                             <button class="w-full relative border border-white/20 rounded-full overflow-hidden bg-gray-800 hover:text-slate-800 group p-2 px-6">
                                 <span class="relative z-10 group-hover:text-black">Login</span>
-                                <span class="absolute inset-0 bg-white text-black translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                                <span class="absolute inset-0 bg-white text-black -translate-y-full scale-125 rounded-full group-hover:translate-y-0 transition-all duration-300 ease-out"></span>
                             </button>
                         </a>
                     </div>
@@ -203,7 +203,8 @@
     </header>
 
     <main>
-        <section class="pt-32 sm:pt-40 md:pt-52 pb-20 sm:pb-32 md:pb-40 text-center">
+        <!-- Hero Section -->
+        <section class="pt-36 sm:pt-48 md:pt-56 pb-20 sm:pb-28 md:pb-32 text-center">
             <div class="container mx-auto px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 md:mb-8 leading-tight">
                     Mau Jadi Ahli Teknologi? <br>
@@ -213,188 +214,397 @@
                     Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 ">
-                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-4 overflow-hidden bg-gray-800 hover:text-slate-800 group">
-                        <span class="relative z-10 group-hover:text-white">Daftar Sekarang</span>
-                         <span class="absolute inset-0 bg-blue-600 text-white translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-8 overflow-hidden bg-blue-600 text-white font-semibold group">
+                        <span>Daftar Sekarang</span>
                     </button>
-                    <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors"><i></i>&#11208; Video Profile</button>
+                    <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                          <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
+                        </svg>
+                        Video Profile
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- Video Preview Section -->
         <section class="container mx-auto px-4">
             <div class="relative bg-sky-900 border border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
-                <div class="relative flex items-center justify-center">        
-                    <img src="/img/Kalkulus.jpg" alt="Video preview" class="object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">
-                    <img src="./asset/Play.png" class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                <div class="relative flex items-center justify-center">    
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/1200x700/0c4a6e/ffffff?text=Video+Profile+Kampus';" alt="Video preview of STIMIK Tunas Bangsa campus" class="object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">
+                    <button class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110 bg-black/30 backdrop-blur-sm">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 p-2">
+                          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="py-5">
-                <div class="rounded-full p-4 mx-auto w-full max-w-6xl flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center font-semibold shadow-sky-900/40">
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
-                        <span class="relative z-10">Matematika Diskrit</span>
-                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                <div class="p-4 mx-auto w-full max-w-6xl flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center font-semibold">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                        <span class="relative z-10 group-hover:text-black">Matematika Diskrit</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
-                        <span class="relative z-10">AI & Machine Learning</span>
-                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                        <span class="relative z-10 group-hover:text-black">AI & Machine Learning</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
-                        <span class="relative z-10">Web Development</span>
-                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                        <span class="relative z-10 group-hover:text-black">Web Development</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
-                        <span class="relative z-10">Cyber Security</span>
-                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                        <span class="relative z-10 group-hover:text-black">Cyber Security</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-800 hover:font-semibold group text-sm sm:text-base">
-                        <span class="relative z-10">Mobile Programming</span>
-                         <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-x-100 transition-all duration-300 ease-out"></span>
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                        <span class="relative z-10 group-hover:text-black">Mobile Programming</span>
+                        <span class="absolute inset-0 bg-white translate-y-full scale-x-25 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- logo sponsor -->
-            <section class="">
-                    <div class="flex items-center justify-center gap-20 bg-white py-2 mt-8">
-                        <img src="./asset/adidas.png" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/bear.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/disney.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/gillet.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/nike.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/NovaTech.png" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/x.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/polpo.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/tiger.png" alt="Logo Sponsor 1" class=" w-[100px]">
-                        <img src="./asset/under.jpg" alt="Logo Sponsor 1" class=" w-[100px]">
-                    </div>
-            </section>
+        <!-- Sponsor Logos Section -->
+        <section class="w-full py-12 bg-white">
+            <div class="relative flex overflow-hidden group">
+                <div class="flex animate-scroll group-hover:[animation-play-state:paused]">
+                    <img src="https://i.pinimg.com/564x/07/31/5a/07315a452109e234327514a4b8633a69.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/24/5b/7e/245b7e8081a2993f3503a7469a1b151e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/93/77/a9/9377a949e290f5c1a7c0b05b8719afa0.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/e7/6e/8f/e76e8f000305f87b275211977711202e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/54/19/22/541922a2754439169a910113c51f4e1e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/64/0c/c2/640cc247858c2b53a0026e63283f3a09.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/5b/5c/62/5b5c62198083a21626a575b0a70d102e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/2a/3b/09/2a3b0922e0325f6e21b033108c58256a.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                </div>
+                <!-- Duplicate for seamless scroll -->
+                 <div class="flex animate-scroll group-hover:[animation-play-state:paused]" aria-hidden="true">
+                    <img src="https://i.pinimg.com/564x/07/31/5a/07315a452109e234327514a4b8633a69.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/24/5b/7e/245b7e8081a2993f3503a7469a1b151e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/93/77/a9/9377a949e290f5c1a7c0b05b8719afa0.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/e7/6e/8f/e76e8f000305f87b275211977711202e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/54/19/22/541922a2754439169a910113c51f4e1e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/64/0c/c2/640cc247858c2b53a0026e63283f3a09.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/5b/5c/62/5b5c62198083a21626a575b0a70d102e.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="https://i.pinimg.com/564x/2a/3b/09/2a3b0922e0325f6e21b033108c58256a.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                </div>
+            </div>
+        </section>
 
+        <!-- Explore Campus Section -->
+        <section class="py-20 bg-slate-900">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Jelajahi Kampus STIMIK Tunas Bangsa</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="relative rounded-lg overflow-hidden group h-80">
+                        <img src="https://images.unsplash.com/photo-1571260899052-701ab1b4194d?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/3b82f6/ffffff?text=Fasilitas';" alt="Fasilitas Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Fasilitas Modern</h3>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                     <div class="relative rounded-lg overflow-hidden group h-80">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/10b981/ffffff?text=Mahasiswa';" alt="Kehidupan Mahasiswa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kehidupan Mahasiswa</h3>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                     <div class="relative rounded-lg overflow-hidden group h-80">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d044b3a4532?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/f97316/ffffff?text=Prestasi';" alt="Prestasi & Inovasi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Prestasi & Inovasi</h3>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                     <div class="relative rounded-lg overflow-hidden group h-80">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/8b5cf6/ffffff?text=Alumni';" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Organizations Section -->
         <section class="bg-black py-16 md:py-20">
             <div class="container mx-auto px-4 items-center text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Himpunan Mahasiswa <span class="border-b-2">STIMIK Tunas Bangsa</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Organisasi & Unit Kegiatan Mahasiswa</h2>
                 <p class="text-slate-400 max-w-3xl mx-auto mb-12">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe velit rerum odio. Unde repudiandae odit doloribus debitis atque doloremque perspiciatis iusto illum veniam iure fuga fugiat voluptatum dicta, corporis ab modi nobis, exercitationem labore ratione, dignissimos mollitia in tempore!
+                    Kembangkan soft skill, perluas jaringan, dan salurkan minat bakatmu melalui berbagai Unit Kegiatan Mahasiswa (UKM) dan organisasi yang ada di STIMIK Tunas Bangsa.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left">
                     
-                    <!-- Kartu Himpunan -->
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                    <!-- Organization Card -->
+                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">BEM</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=BEM" alt="Logo BEM" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
                         <p class="font-bold pb-4 flex-grow">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi.</p>
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
 
-                    <!-- Duplikat kartu untuk contoh -->
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HMTIKA</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA" alt="Logo HMTIKA" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA';" alt="Himpunan Mahasiswa Teknik Informatika" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Teknik Informatika</p>
                         <p class="font-bold pb-4 flex-grow">Mengembangkan potensi mahasiswa Informatika melalui kegiatan akademik dan non-akademik.</p>
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
                     
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
+                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HIMASI</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=HIMASI" alt="Logo HIMASI" class="w-full h-full object-cover">
+                           <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Sistem Informasi</p>
                         <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                    
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
-                        <h3 class="text-xl font-bold">UKM Koding</h3>
-                        <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+Koding" alt="Logo UKM Koding" class="w-full h-full object-cover">
-                        </div>
-                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
-                        <p class="font-bold pb-4 flex-grow">Komunitas bagi para mahasiswa yang tertarik pada dunia pemrograman dan pengembangan software.</p>
-                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
-                        <h3 class="text-xl font-bold">UKM Desain</h3>
-                        <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+Desain" alt="Logo UKM Desain" class="w-full h-full object-cover">
-                        </div>
-                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
-                        <p class="font-bold pb-4 flex-grow">Mewadahi kreativitas mahasiswa di bidang desain grafis, UI/UX, dan multimedia.</p>
-                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-white/5 duration-300 ease-out hover:-translate-y-2">
-                        <h3 class="text-xl font-bold">UKM E-Sport</h3>
-                        <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://placehold.co/600x400/1e293b/ffffff?text=UKM+E-Sport" alt="Logo UKM E-Sport" class="w-full h-full object-cover">
-                        </div>
-                        <p class="pb-2 font-light text-white/75">Unit Kegiatan Mahasiswa</p>
-                        <p class="font-bold pb-4 flex-grow">Mengasah bakat dan strategi mahasiswa dalam kompetisi game elektronik tingkat regional dan nasional.</p>
-                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                    
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-slate-900 text-white">
+        <!-- News & Information Section -->
+        <section class="py-20 bg-slate-50 text-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Berita & Informasi Terkini</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto mt-4">Ikuti perkembangan terbaru dari kegiatan akademik, prestasi mahasiswa, dan berbagai acara menarik di STIMIK Tunas Bangsa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- News Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1587825140708-df876c12b44e?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Workshop+AI';" alt="Workshop AI" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-blue-500 font-semibold">WORKSHOP</p>
+                            <h3 class="text-xl font-bold my-2 hover:text-blue-500 transition-colors"><a href="#">STIMIK TB Gelar Workshop "Implementasi AI untuk Bisnis Digital"</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Mahasiswa antusias mengikuti workshop yang menghadirkan praktisi AI dari industri ternama.</p>
+                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- News Card 2 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Lomba+Koding';" alt="Lomba Koding" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-blue-500 font-semibold">PRESTASI</p>
+                            <h3 class="text-xl font-bold my-2 hover:text-blue-500 transition-colors"><a href="#">Mahasiswa STIMIK TB Raih Juara 1 Lomba Competitive Programming Tingkat Nasional</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Tim "Binary Brains" berhasil mengungguli puluhan tim dari universitas lain.</p>
+                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- News Card 3 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1626266060898-1107871b8d34?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=Pengabdian';" alt="Pengabdian Masyarakat" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
+                        <div class="p-6">
+                            <p class="text-sm text-blue-500 font-semibold">PENGABDIAN MASYARAKAT</p>
+                            <h3 class="text-xl font-bold my-2 hover:text-blue-500 transition-colors"><a href="#">Program Pelatihan Digital Marketing untuk UMKM Lokal</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Sebagai wujud Tri Dharma Perguruan Tinggi, STIMIK TB membantu UMKM go-digital.</p>
+                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="#" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">Lihat Semua Berita</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us / Stats Section -->
+        <section class="py-20 bg-slate-950 text-white">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     
-                <!-- Bagian Kiri -->
-                <div class="space-y-8">
-                    <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
-                        Kenapa Harus Kuliah di <span class="text-blue-400">STIMIK Tunas Bangsa?</span>
-                    </h2>
-                    <p class="text-slate-400 max-w-lg leading-relaxed">
-                        Kami berkomitmen untuk mencetak lulusan yang kompeten, inovatif, dan siap bersaing di era digital.
-                        Temukan alasan mengapa kami adalah pilihan terbaik untuk masa depan Anda.
-                    </p>
-                    <a href="#"
-                    class="inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold shadow-md transition-all duration-300">
-                        Baca Selengkapnya
-                    </a>
-
-                    <!-- Accordion Info -->
-                    <div class="space-y-4 pt-6">
-                        <div class="border-b border-white/25 p-4">
-                            <h3 class="text-lg font-semibold flex justify-between items-center">
-                                Program Studi di Kampus <span class="text-blue-400">+</span>
-                            </h3>
-                        </div>
-                        <div class="border-b border-white/25 p-4">
-                            <h3 class="text-lg font-semibold flex justify-between items-center">
-                                Beasiswa KIP-K yang Ada di STIMIK <span class="text-blue-400">+</span>
-                            </h3>
-                        </div>
-                        <div class="border-b border-white/25 p-4">
-                            <h3 class="text-lg font-semibold flex justify-between items-center">
-                                Seminar dan Workshop Rutin <span class="text-blue-400">+</span>
-                            </h3>
-                        </div>
-                        <div class="border-b border-white/25 p-4">
-                            <h3 class="text-lg font-semibold flex justify-between items-center">
-                                Cerita Sukses Para Alumni <span class="text-blue-400">+</span>
-                            </h3>
+                    <!-- Left Side: Text Content -->
+                    <div class="space-y-8">
+                        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight">
+                            Bergabung dengan Komunitas Unggul di <span class="text-blue-400">STIMIK Tunas Bangsa</span>
+                        </h2>
+                        <p class="text-slate-400 max-w-lg leading-relaxed">
+                            Kami tidak hanya menawarkan pendidikan, tetapi juga ekosistem yang mendukung pertumbuhan, inovasi, dan kesuksesan karir Anda di masa depan.
+                        </p>
+                        <!-- Stats Section -->
+                        <div class="grid grid-cols-2 gap-6 pt-4">
+                            <div>
+                                <p class="text-4xl font-bold text-blue-400" data-target="1500">0</p>
+                                <p class="text-slate-300">Mahasiswa Aktif</p>
+                            </div>
+                             <div>
+                                <p class="text-4xl font-bold text-blue-400" data-target="2">0</p>
+                                <p class="text-slate-300">Program Studi Unggulan</p>
+                            </div>
+                             <div>
+                                <p class="text-4xl font-bold text-blue-400" data-target="95">0</p>
+                                <p class="text-slate-300">Lulusan Bekerja < 6 Bulan</p>
+                            </div>
+                             <div>
+                                <p class="text-4xl font-bold text-blue-400" data-target="50">0</p>
+                                <p class="text-slate-300">Kerja Sama Industri</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <!-- Bagian Kanan (Placeholder, bisa diisi gambar atau konten lain) -->
+        
+                    <!-- Right Side: Image -->
                     <div class="hidden lg:block">
-                         <img src="https://placehold.co/600x400/1e293b/3b82f6?text=Kampus+Modern" alt="Gedung Kampus" class="rounded-lg shadow-2xl">
+                         <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x700/1e293b/3b82f6?text=Kampus+Modern';" alt="Modern campus building" class="rounded-lg shadow-2xl h-full object-cover">
                     </div>
+        
                 </div>
             </div>
         </section>
-
     </main>
+    
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
+                <!-- About Column -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <span class="text-blue-500 font-extrabold text-lg leading-tight">STIMIK <br>
+                            <span class="text-white font-normal">Tunas Bangsa</span>
+                        </span>
+                    </a>
+                    <p class="text-slate-400 pr-4">Mencetak generasi unggul di bidang teknologi informasi yang siap menghadapi tantangan global.</p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="font-bold text-white mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400">Pendaftaran</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kalender Akademik</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Portal Mahasiswa</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Berita</a></li>
+                    </ul>
+                </div>
+
+                <!-- Explore Column -->
+                <div>
+                    <h3 class="font-bold text-white mb-4">Jelajahi</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400">Kehidupan Kampus</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Fasilitas</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Organisasi Mahasiswa</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Alumni</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="font-bold text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-start">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 text-blue-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Jl. Pendidikan No. 123, Kota Teknologi, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>(021) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 mt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm text-center sm:text-left mb-4 sm:mb-0">
+                    &copy; 2025 STIMIK Tunas Bangsa. All Rights Reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-slate-500 hover:text-blue-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-slate-500 hover:text-blue-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="text-slate-500 hover:text-blue-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.356 9.312-.062-.329-.094-.744.024-1.123.13-.539.77-3.264.77-3.264s-.2-.4-.2-.988c0-.926.535-1.62.9-1.62.428 0 .63.318.63.693 0 .425-.27.99-.413 1.543-.118.473.235.868.688.868.833 0 1.486-1.053 1.486-2.57 0-1.29-.933-2.248-2.074-2.248-1.373 0-2.164 1.03-2.164 2.268 0 .381.144.787.328 1.031.033.044.04.095.027.147-.024.094-.083.33-.105.418-.035.132-.14.175-.292.105-1.012-.442-1.65-1.958-1.65-3.328 0-2.355 1.76-4.328 4.908-4.328 2.585 0 4.49 1.837 4.49 4.122 0 2.54-1.425 4.43-3.415 4.43-.687 0-1.332-.365-1.55-.792l-.337 1.284c-.167.632-.612 1.45-1.022 1.849a.95.95 0 00-.281.25A10.012 10.012 0 0012 22a10.012 10.012 0 007.644-3.688C21.053 17.58 22 14.897 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Hamburger Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('hamburger-active');
+                    navMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                     if (hamburger.classList.contains('hamburger-active')) {
+                        hamburger.classList.remove('hamburger-active');
+                        navMenu.classList.add('hidden');
+                     }
+                });
+            });
+
+            // JavaScript for counter animation
+            const counters = document.querySelectorAll('[data-target]');
+            const statsSection = document.querySelector('.py-20.bg-slate-950'); 
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    
+                    const updateCounter = () => {
+                        const increment = target / 100;
+                        
+                        if (count < target) {
+                            count += increment;
+                            if(count > target) count = target;
+                            counter.innerText = Math.ceil(count).toLocaleString('id-ID');
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            let suffix = '';
+                            if (['1500', '50'].includes(counter.getAttribute('data-target'))) {
+                                suffix = '+';
+                            } else if (counter.getAttribute('data-target') === '95') {
+                                suffix = '%';
+                            }
+                            counter.innerText = target.toLocaleString('id-ID') + suffix;
+                        }
+                    };
+                    updateCounter();
+                });
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            if(statsSection){
+                observer.observe(statsSection);
+            }
+        });
+    </script>
 </body>
 </html>
+
