@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STIMIK Tunas Bangsa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="./js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -86,7 +86,7 @@
                 </div>
                 
                 <!-- Navigation Menu -->
-                <div id="nav-menu" class="hidden absolute lg:relative top-full left-0 w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-12">
+                <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-12">
                     <nav class="w-full lg:w-auto block items-center ">
                         <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-0">
                             <!-- Program Studi Dropdown -->
@@ -210,7 +210,7 @@
                 <!-- Login and Sign -->
                 <div class="" id="btn-login">
                     <a href="#" class="border m-2 py-2 px-4 rounded-full border-slate-50/25">Masuk</a>
-                    <a href="#" class="m-2 py-2 px-4 rounded-full bg-blue-600 ">Daftar</a>
+                    <a href="#" class="m-2 py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-400 transition-all duration-100 ease-in">Daftar</a>
                 </div>
 
             </div>
@@ -229,10 +229,10 @@
                     Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 ">
-                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-8 overflow-hidden bg-blue-600 text-white font-semibold group">
+                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-8 overflow-hidden bg-blue-600 text-white font-semibold group hover:bg-blue-500 hover:border-blue-400 transition-all duration-200 ease-in">
                         <span>Daftar Sekarang</span>
                     </button>
-                    <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors flex items-center justify-center gap-2">
+                    <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors flex items-center justify-center gap-2 duration-200 ease-in">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                           <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                           <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
@@ -247,7 +247,7 @@
         <section class="container mx-auto px-4">
             <div class="relative bg-sky-900 border border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
                 <div class="relative flex items-center justify-center">    
-                    <img src="./img/Kalkulus.jpg" alt="Video preview of STIMIK Tunas Bangsa campus" class="object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">
+                    <img src="https://i.pinimg.com/1200x/da/63/b5/da63b52d118d66f1cf7a75b0a0ca2245.jpg" alt="Video preview of STIMIK Tunas Bangsa campus" class="object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">
                     <button class="absolute z-0 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110 bg-black/30 backdrop-blur-sm">
                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 p-2">
                           <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
@@ -282,22 +282,22 @@
         </section>
 
         <!-- Sponsor Logos Section -->
-        <section class="w-full py-12 bg-white">
+        <section class="w-full py-4 bg-white">
             <div class="relative flex overflow-hidden group">
-                <div class="flex  animate-scroll group-hover:[animation-play-state:paused]">
-                    <img src="./asset/adidas.png" alt="Sponsor Logo" class="w-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/bear.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/disney.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/gillet.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/google.png" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/LimaTech.png" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/nike.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/NovaTech.png" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/Play.png" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/tiger.png" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/polpo.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/under.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="./asset/x.jpg" alt="Sponsor Logo" class="w-36 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                <div class="flex animate-scroll group-hover:[animation-play-state:paused]">
+                    <img src="./asset/adidas.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/bear.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/disney.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/gillet.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/google.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/LimaTech.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/nike.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/NovaTech.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/Play.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/tiger.png" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/polpo.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/under.jpg" alt="Sponsor Logo" class="h-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                    <img src="./asset/x.jpg" alt="Sponsor Logo" class="w-12 mx-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
                 </div>
             </div>
         </section>
@@ -309,28 +309,28 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Card 1 -->
                     <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="./img/Fasilitas.jpg" alt="Fasilitas Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://i.pinimg.com/736x/22/39/24/223924bd54baf7cf19727ea031204da4.jpg" alt="Fasilitas Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Fasilitas Modern</h3>
                         </div>
                     </div>
                     <!-- Card 2 -->
                      <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/10b981/ffffff?text=Mahasiswa';" alt="Kehidupan Mahasiswa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://i.pinimg.com/736x/c8/b3/86/c8b38644db404dcd396dadb4ab57be85.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x600/10b981/ffffff?text=Mahasiswa';" alt="Kehidupan Mahasiswa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Kehidupan Mahasiswa</h3>
                         </div>
                     </div>
                     <!-- Card 3 -->
                      <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://i.pinimg.com/736x/41/ff/30/41ff30cb8386f2a8e844df09586ee073.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x600/f97316/ffffff?text=Prestasi';" alt="Prestasi & Inovasi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://i.pinimg.com/736x/bb/f4/12/bbf412402a7e8a373349b3aa5856a4d3.jpg"  alt="Prestasi & Inovasi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Prestasi & Inovasi</h3>
                         </div>
                     </div>
                     <!-- Card 4 -->
                      <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x600/8b5cf6/ffffff?text=Alumni';" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
                         </div>
@@ -340,7 +340,7 @@
         </section>
 
         <!-- Why Choose Us / FAQ Section -->
-        <section class="py-20">
+        <section class="py-20 bg-indigo-950/10">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="space-y-6">
@@ -382,7 +382,7 @@
                     </div>
 
                     <div class="hidden lg:block">
-                        <img src="https://placehold.co/600x700/0f172a/e2e8f0?text=STIMIK+Campus" alt="Gedung Kampus STIMIK Tunas Bangsa" class="rounded-2xl shadow-lg w-full h-full object-cover">
+                        <img src="https://i.pinimg.com/1200x/ee/37/6a/ee376ac2670f7ae560a1cd2145865017.jpg" alt="Gedung Kampus STIMIK Tunas Bangsa" class="rounded-2xl shadow-lg w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -401,7 +401,7 @@
                     <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">BEM</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
+                            <img src="https://i.pinimg.com/736x/e2/b6/0f/e2b60fe47bce4110f6b8142f98ef661f.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Badan Eksekutif Mahasiswa</p>
                         <p class="font-bold pb-4 flex-grow">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi.</p>
@@ -411,7 +411,7 @@
                     <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HMTIKA</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA';" alt="Himpunan Mahasiswa Teknik Informatika" class="w-full h-full object-cover">
+                            <img src="https://i.pinimg.com/1200x/d1/10/d5/d110d5becd7a0e6925302abc2feb8c01.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA';" alt="Himpunan Mahasiswa Teknik Informatika" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Teknik Informatika</p>
                         <p class="font-bold pb-4 flex-grow">Mengembangkan potensi mahasiswa Informatika melalui kegiatan akademik dan non-akademik.</p>
@@ -421,7 +421,7 @@
                     <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HIMASI</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
-                           <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
+                           <img src="https://i.pinimg.com/736x/e8/7c/72/e87c721971793ff843932a32d31dbb4a.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
                         </div>
                         <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Sistem Informasi</p>
                         <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
@@ -429,6 +429,25 @@
                     </div>
                 </div>
             </div>
+
+            <!-- button lebih lanjut -->
+             <div class="text-center ">
+                <button class="bg-blue-600 text-white font-semibold px-4 py-2 mt-16 rounded-xl hover:bg-blue-400 transition-all duration-300">Temukan Lainya...</button>
+                <di class="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left absolute hidden mt-2 w-48 bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+                    <a href="#">
+                        <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">HIMASI</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                           <img src="https://i.pinimg.com/736x/e8/7c/72/e87c721971793ff843932a32d31dbb4a.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Sistem Informasi</p>
+                        <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    </div>
+                    </a>
+                </div>
+             </div>
+
         </section>
 
         <!-- News & Information Section -->
@@ -440,61 +459,77 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- News Card 1 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px]">
-                        <img src="./img/Pncak silat.png" alt="Pancak Silat" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px] hover:bg-white/5 hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://i.pinimg.com/736x/45/6a/b1/456ab1c92c324baa270c9f4eaf8a83b3.jpg" alt="Pancak Silat" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
                         <div class="p-6">
                             <div class="flex gap-4">
                                 <p class="font-normal text-slate-500">18 Juli, 2025</p>
                                 <p class="text-blue-500 font-semibold">Pancak Silat tingkat JATENG</p>
                             </div>
-                            <h3 class="text-2xl font-bold my-2"><a href="#">Mahasiswa Informatika tampil di POMPROV Jawa Tengah 2025 Cabang Pencak Silat.</a></h3>
-                            <p class="text-slate-600 text-sm mb-4">Dua mahasiswa Program Studi Informatika STMIK Tunas Bangsa, Dadang Utomo dan Muhamad Ahaduzen, kembali membawa nama baik kampus ke kancah kompetisi olahraga tingkat provinsi. Keduanya berhasil lolos sebagai wakil kampus dalam ajang Pekan Olahraga Mahasiswa Provinsi (POMPROV) Jawa Tengah 2025, khususnya pada cabang olahraga Pencak Silat...</p>
-                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
+                            <h3 class="text-2xl font-bold my-2 hover:underline"><a href="#">Mahasiswa Informatika tampil di POMPROV Jawa Tengah 2025 Cabang Pencak Silat.</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Dua mahasiswa Program Studi Informatika STMIK Tunas Bangsa, Dadang Utomo dan Muhamad Ahaduzen, kembali membawa nama baik kampus ke kancah kompetisi olahraga tingkat provinsi. Keduanya berhasil lolos sebagai wakil kampus dalam ajang Pekan Olahraga Mahasiswa Provinsi (POMPROV) Jawa Tengah 2025, khususnya pada cabang olahraga Pencak Silat...</p>
                         </div>
                     </div>
                     <!-- News Card 2 -->
-                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px]">
-                        <img src="./img/Rectangle 53.jpg" alt="Lomba Koding" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px] hover:bg-white/5 hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://i.pinimg.com/736x/42/92/aa/4292aaa534cb1280735a8d53bc1b11cf.jpg" alt="Lomba Koding" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
                         <div class="p-6">
                            <div class="flex gap-4">
                                 <p class="font-normal text-slate-500">18 Juli, 2025</p>
                                 <p class="text-blue-500 font-semibold">Seleksi CAMABA 2025/2026</p>
                             </div>
-                            <h3 class="text-2xl font-bold my-2"><a href="#">Seleksi Calon Mahasiswa Baru STMIK Tunas Bangsa Tahun Akademik 2025/2026 Berlangsung Lancar.</a></h3>
+                            <h3 class="text-2xl font-bold my-2 hover:underline"><a href="#">Seleksi Calon Mahasiswa Baru STMIK Tunas Bangsa Tahun Akademik 2025/2026 Berlangsung Lancar.</a></h3>
                             <p class="text-slate-600 text-sm mb-4">STMIK Tunas Bangsa Banjarnegara kembali menyelenggarakan kegiatan Ujian Seleksi Calon Mahasiswa Baru (Camaba) untuk Tahun Akademik 2025/2026 Gelombang I, yang dilaksanakan pada Rabu, 18 Juni 2025, bertempat di lingkungan Kampus STMIK Tunas Bangsa. Sebanyak lebih dari 90 peserta..</p>
-                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
                         </div>
                     </div>
                     <!-- News Card 3 -->
-                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px]">
-                        <img src="./img/Rectangle 54.png" alt="Pengabdian Masyarakat" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px] hover:bg-white/5 hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://i.pinimg.com/736x/61/08/42/6108424086cc135f4ba40f2cf9db6b28.jpg" alt="Pengabdian Masyarakat" class="w-full h-96 object-cover group-hover:opacity-90 transition-opacity">
                         <div class="p-6">
                            <div class="flex gap-4">
                                 <p class="font-normal text-slate-500">18 Juli, 2025</p>
                                 <p class="text-blue-500 font-semibold">Rapat Akreditasi kampus</p>
                             </div>
-                            <h3 class="text-2xl font-bold my-2 hover:text-blue-500 transition-colors"><a href="#">Rapat Persiapan Akreditasi Program Studi Informatika STMIK Tunas Bangsa</a></h3>
+                            <h3 class="text-2xl font-bold my-2 hover:underline"><a href="#">Rapat Persiapan Akreditasi Program Studi Informatika STMIK Tunas Bangsa</a></h3>
                             <p class="text-slate-600 text-sm mb-4">STMIK Tunas Bangsa terus menunjukkan komitmennya dalam meningkatkan mutu pendidikan melalui berbagai langkah strategis. Salah satu langkah penting yang saat ini tengah dilakukan adalah persiapan Asesmen Lapangan oleh Lembaga Akreditasi Mandiri Informatika dan Komputer (LAM INFOKOM) untuk Program Studi Informatika...</p>
-                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
                         </div>
                     </div>
-                                        <!-- News Card 3 -->
-                     <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[750px]">
+                    <!-- News Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[300px] hover:scale-105 hover:bg-white/5 transition-all duration-500 ease-out ">
                         <div class="p-6">
                            <div class="flex gap-4">
                                 <p class="font-normal text-slate-500">18 Juli, 2025</p>
                                 <p class="text-blue-500 font-semibold">Rapat Akreditasi kampus</p>
                             </div>
-                            <h3 class="text-2xl font-bold my-2 hover:text-blue-500 transition-colors"><a href="#">Mahasiswa Informatika STIMIK Tunas Bangsa Raih Juara 3 Lomba Pidato Bulan Bung Karno 2025</a></h3>
+                            <h3 class="text-2xl font-bold my-2"><a href="#">Mahasiswa Informatika STIMIK Tunas Bangsa Raih Juara 3 Lomba Pidato Bulan Bung Karno 2025</a></h3>
                             <p class="text-slate-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam voluptatem ullam dolore! Dolores, odit? Tempore distinctio excepturi quibusdam optio, dolores obcaecati et praesentium quam, magnam itaque, quo vero autem...</p>
-                            <a href="#" class="font-semibold text-blue-600 hover:underline">Baca Selengkapnya &rarr;</a>
                         </div>
                     </div>
-                    
-                 <div class="text-center items-center mt-12">
-                    <a href="#" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">Lihat Semua Berita</a>
+                                        <!-- News Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[300px] hover:scale-105 hover:bg-white/5 transition-all duration-500 ease-out ">
+                        <div class="p-6">
+                           <div class="flex gap-4">
+                                <p class="font-normal text-slate-500">18 Juli, 2025</p>
+                                <p class="text-blue-500 font-semibold">Rapat Akreditasi kampus</p>
+                            </div>
+                            <h3 class="text-2xl font-bold my-2"><a href="#">Mahasiswa Informatika STIMIK Tunas Bangsa Raih Juara 3 Lomba Pidato Bulan Bung Karno 2025</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam voluptatem ullam dolore! Dolores, odit? Tempore distinctio excepturi quibusdam optio, dolores obcaecati et praesentium quam, magnam itaque, quo vero autem...</p>
+                        </div>
+                    </div>                    <!-- News Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group h-[300px] hover:scale-105 hover:bg-white/5 transition-all duration-500 ease-out ">
+                        <div class="p-6">
+                           <div class="flex gap-4">
+                                <p class="font-normal text-slate-500">18 Juli, 2025</p>
+                                <p class="text-blue-500 font-semibold">Rapat Akreditasi kampus</p>
+                            </div>
+                            <h3 class="text-2xl font-bold my-2"><a href="#">Mahasiswa Informatika STIMIK Tunas Bangsa Raih Juara 3 Lomba Pidato Bulan Bung Karno 2025</a></h3>
+                            <p class="text-slate-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam voluptatem ullam dolore! Dolores, odit? Tempore distinctio excepturi quibusdam optio, dolores obcaecati et praesentium quam, magnam itaque, quo vero autem...</p>
+                        </div>
+                    </div>                    
                 </div>
-            </div>
+                <div class="text-center items-center mt-12 pt-12 animate-bounce duration-500">
+                   <a href="#" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">Lihat Semua Berita</a>
+               </div>
         </section>
 
         <!-- Why Us / Stats Section -->
@@ -532,10 +567,11 @@
                     </div>
         
                     <!-- Right Side: Image -->
-                    <div class="hidden lg:block">
-                         <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x700/1e293b/3b82f6?text=Kampus+Modern';" alt="Modern campus building" class="rounded-lg shadow-2xl h-full object-cover">
+                    <div class="flex">
+                        <div class="lg:block">
+                         <img src="https://i.pinimg.com/1200x/18/cc/00/18cc00251299ec15533c7f7b64cc24c4.jpg" alt="Modern campus building" class="rounded-lg shadow-2xl h-full object-cover">
+                        </div>
                     </div>
-        
                 </div>
             </div>
         </section>
@@ -683,6 +719,19 @@
                 observer.observe(statsSection);
             }
         });
+            const btn = document.getElementById('moreBtn');
+    const menu = document.getElementById('moreMenu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Tutup menu jika klik di luar
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
     </script>
 </body>
 </html>
