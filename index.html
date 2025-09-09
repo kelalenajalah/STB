@@ -59,6 +59,45 @@
             transform: rotate(-45deg) translate(7px, -7px);
         }
     </style>
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-image: linear-gradient(145deg, #111827, #1f2937);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        #more-content {
+            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        #more-content.active {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .gradient-button {
+            background-image: linear-gradient(to right, #6366f1, #3b82f6);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
+        }
+    </style>
 </head>
 <body class="font-poppins">
 
@@ -245,7 +284,7 @@
 
         <!-- Video Preview Section -->
         <section class="container mx-auto px-4">
-            <div class="relative bg-sky-9040 border border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
+            <div class="relative bg-sky-9040 border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
                 <div class="relative flex items-center object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">    
                     <iframe 
                     src="https://youtu.be/nAz0SeVHZzA?si=XKVPzlPssq8UvgMR" 
@@ -307,34 +346,62 @@
         </section>
 
         <!-- Explore Campus Section -->
-        <section class="py-20 bg-slate-900">
+        <section class="py-20 bg-slate-950 grid-cols-4">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12">Jelajahi Kampus STIMIK Tunas Bangsa</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Card 1 -->
-                    <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://i.pinimg.com/736x/22/39/24/223924bd54baf7cf19727ea031204da4.jpg" alt="Fasilitas Modern" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="relative rounded-lg overflow-hidden group h-80 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/22/39/24/223924bd54baf7cf19727ea031204da4.jpg" alt="Fasilitas Modern" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                            <h3 class="text-white text-2xl font-bold">Fasilitas Modern</h3>
+                            <h3 class="text-white text-2xl font-bold text-center block">Fasilitas Modern</h3>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                     <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://i.pinimg.com/736x/c8/b3/86/c8b38644db404dcd396dadb4ab57be85.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x600/10b981/ffffff?text=Mahasiswa';" alt="Kehidupan Mahasiswa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                     <div class="relative rounded-lg overflow-hidden group h-80 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/c8/b3/86/c8b38644db404dcd396dadb4ab57be85.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x600/10b981/ffffff?text=Mahasiswa';" alt="Kehidupan Mahasiswa" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Kehidupan Mahasiswa</h3>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                     <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://i.pinimg.com/736x/bb/f4/12/bbf412402a7e8a373349b3aa5856a4d3.jpg"  alt="Prestasi & Inovasi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                     <div class="relative rounded-lg overflow-hidden group h-80 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/bb/f4/12/bbf412402a7e8a373349b3aa5856a4d3.jpg"  alt="Prestasi & Inovasi" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Prestasi & Inovasi</h3>
                         </div>
                     </div>
                     <!-- Card 4 -->
-                     <div class="relative rounded-lg overflow-hidden group h-80">
-                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                     <div class="relative rounded-lg overflow-hidden group h-80 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
+                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                             <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
                         </div>
@@ -458,10 +525,11 @@
                 <p class="text-slate-400 max-w-3xl mx-auto mb-12">
                     Kembangkan soft skill, perluas jaringan, dan salurkan minat bakatmu melalui berbagai Unit Kegiatan Mahasiswa (UKM) dan organisasi yang ada di STIMIK Tunas Bangsa.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left">
-                    
-                    <!-- Organization Card -->
-                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+
+                <!-- Cards Section -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- BEM Card -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2 shadow-slate-800 shadow-xl">
                         <h3 class="text-xl font-bold">BEM</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
                             <img src="https://i.pinimg.com/736x/e2/b6/0f/e2b60fe47bce4110f6b8142f98ef661f.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
@@ -471,7 +539,8 @@
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
 
-                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                    <!-- HMTIKA Card -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HMTIKA</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
                             <img src="https://i.pinimg.com/1200x/d1/10/d5/d110d5becd7a0e6925302abc2feb8c01.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA';" alt="Himpunan Mahasiswa Teknik Informatika" class="w-full h-full object-cover">
@@ -480,25 +549,9 @@
                         <p class="font-bold pb-4 flex-grow">Mengembangkan potensi mahasiswa Informatika melalui kegiatan akademik dan non-akademik.</p>
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                    
-                    <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
-                        <h3 class="text-xl font-bold">HIMASI</h3>
-                        <div class="my-4 rounded-xl overflow-hidden h-48">
-                           <img src="https://i.pinimg.com/736x/e8/7c/72/e87c721971793ff843932a32d31dbb4a.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
-                        </div>
-                        <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Sistem Informasi</p>
-                        <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
-                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- button lebih lanjut -->
-             <div class="text-center ">
-                <button class="bg-blue-600 text-white font-semibold px-4 py-2 mt-16 rounded-xl hover:bg-blue-400 transition-all duration-300">Temukan Lainya...</button>
-                <di class="grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left absolute hidden mt-2 w-48 bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
-                    <a href="#">
-                        <div class="bg-slate-950 p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                    <!-- HIMASI Card -->   
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
                         <h3 class="text-xl font-bold">HIMASI</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
                            <img src="https://i.pinimg.com/736x/e8/7c/72/e87c721971793ff843932a32d31dbb4a.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
@@ -507,9 +560,75 @@
                         <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
                         <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
                     </div>
-                    </a>
                 </div>
-             </div>
+
+        <!-- "Temukan Lainya" Button -->
+        <button id="show-more-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full mb-12 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50 animate-bounce">
+            Temukan Lainya...
+        </button>
+
+        <!-- More Content Section (Hidden by default) -->
+        <div id="more-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left">
+             <!-- Additional Cards (contoh) -->
+                    <!-- KSR -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">KSR</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://i.pinimg.com/736x/e2/b6/0f/e2b60fe47bce4110f6b8142f98ef661f.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Korps Sukarela</p>
+                        <p class="font-bold pb-4 flex-grow">Wadah aspirasi dan eksekutor program kerja mahasiswa di tingkat institusi.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    </div>
+
+                    <!-- Mugiwaras Card -->
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">MUGIWARAS</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                            <img src="https://i.pinimg.com/1200x/d1/10/d5/d110d5becd7a0e6925302abc2feb8c01.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HMTIKA';" alt="Himpunan Mahasiswa Teknik Informatika" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Teater Mugiwaras</p>
+                        <p class="font-bold pb-4 flex-grow">Mengembangkan potensi mahasiswa Informatika melalui kegiatan akademik dan non-akademik.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    </div>
+
+                    <!-- HASTINASA Card -->   
+                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2">
+                        <h3 class="text-xl font-bold">HASTINASA</h3>
+                        <div class="my-4 rounded-xl overflow-hidden h-48">
+                           <img src="https://i.pinimg.com/736x/e8/7c/72/e87c721971793ff843932a32d31dbb4a.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=HIMASI';" alt="Himpunan Mahasiswa Sistem Informasi" class="w-full h-full object-cover">
+                        </div>
+                        <p class="pb-2 font-light text-white/75">Himpunan Mahasiswa Pencinta Alam</p>
+                        <p class="font-bold pb-4 flex-grow">Menjadi jembatan antara mahasiswa Sistem Informasi dengan dunia industri dan akademik.</p>
+                        <a href="#" class="mt-auto font-semibold text-white self-start transition-transform duration-300 ease-out hover:translate-x-2 border border-white/25 hover:bg-white/30 hover:text-white hover:border-white/10 py-2 px-4 rounded-xl ">Baca Lebih Lanjut <span class="pl-3">&rarr;</span></a>
+                    </div>
+            <!-- Tombol Sembunyikan -->
+            <div class="col-span-full mt-8 flex justify-center">
+                <button id="hide-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50">
+                    Sembunyikan
+                </button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const showMoreButton = document.getElementById('show-more-button');
+                const hideButton = document.getElementById('hide-button');
+                const moreContent = document.getElementById('more-content');
+                
+                showMoreButton.addEventListener('click', () => {
+                    moreContent.classList.add('active');
+                    showMoreButton.classList.add('hidden');
+                });
+                
+                hideButton.addEventListener('click', () => {
+                    moreContent.classList.remove('active');
+                    showMoreButton.classList.remove('hidden');
+                });
+            });
+        </script>
+
+            </div>
+            </div>
 
         </section>
 

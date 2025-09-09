@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigasi Mega Menu Elegan</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Style kustom untuk font dan efek tambahan */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* slate-900 */
+            color: #F8FAFC; /* slate-50 */
+        }
+
+        /* Efek transisi halus untuk backdrop */
+        #mega-menu-backdrop {
+            transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease-in-out;
+        }
+
+        /* Style untuk hamburger menu */
+        .hamburger-line {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hamburger-active > .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-active > .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-active > .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-slate-950/80 backdrop-blur-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20 relative">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-white">LOGO</a>
+
+                <!-- Tombol Hamburger (untuk mobile) -->
+                <button id="hamburger" name="hamburger" type="button" class="lg:hidden absolute right-4 top-1/2 -translate-y-1/2">
+                    <span class="hamburger-line block w-6 h-0.5 bg-white mb-1.5"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-white mb-1.5"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-white"></span>
+                </button>
+
+                <!-- Navigation Menu Container -->
+                <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center">
+                    <nav class="w-full lg:w-auto">
+                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-0">
+                            <!-- Item Menu dengan Dropdown -->
+                            <li class="nav-item-with-dropdown w-full lg:w-auto" data-target="program-studi">
+                                <a href="#" class="nav-link">Program Studi</a>
+                            </li>
+                            <li class="nav-item-with-dropdown w-full lg:w-auto" data-target="profil">
+                                <a href="#" class="nav-link">Profil</a>
+                            </li>
+                            <li class="nav-item-with-dropdown w-full lg:w-auto" data-target="kemahasiswaan">
+                                <a href="#" class="nav-link">Kemahasiswaan</a>
+                            </li>
+                             <li class="nav-item-with-dropdown w-full lg:w-auto" data-target="beasiswa">
+                                <a href="#" class="nav-link">Beasiswa</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mega Menu Backdrop & Content -->
+        <div id="mega-menu-container" class="absolute left-0 top-full w-full pointer-events-none">
+             <!-- Backdrop (Latar Belakang) -->
+            <div id="mega-menu-backdrop" class="absolute left-0 top-0 w-full h-0 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800 opacity-0 transition-all duration-300 ease-in-out"></div>
+            
+            <!-- Kontainer untuk semua konten menu -->
+            <div id="mega-menu-content-container" class="relative container mx-auto px-4 pointer-events-auto">
+                
+                <!-- Konten untuk Program Studi -->
+                <div data-menu="program-studi" class="mega-menu-content hidden opacity-0 transition-opacity duration-300">
+                     <div class="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Sarjana (S1)</h3>
+                            <a href="#" class="menu-item">Informatika</a>
+                            <a href="#" class="menu-item">Sistem Informasi</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Kalender Akademik</h3>
+                            <a href="#" class="menu-item">Tahun ajaran 2024/2025</a>
+                            <a href="#" class="menu-item">Tahun ajaran 2025/2026</a>
+                            <a href="#" class="menu-item">Tahun ajaran 2026/2027</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Download Dokumen</h3>
+                            <a href="#" class="menu-item">Surat dispensasi</a>
+                            <a href="#" class="menu-item">Surat rekomendasi</a>
+                            <a href="#" class="menu-item">Jurnal ilmiah</a>
+                            <a href="#" class="menu-item">Draft skripsi</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konten untuk Profil -->
+                <div data-menu="profil" class="mega-menu-content hidden opacity-0 transition-opacity duration-300">
+                     <div class="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Fasilitas</h3>
+                            <a href="#" class="menu-item">Laboratorium Komputer</a>
+                            <a href="#" class="menu-item">Perpustakaan Digital</a>
+                            <a href="#" class="menu-item">Ruang Kelas Multimedia</a>
+                            <a href="#" class="menu-item">Koneksi Internet Cepat</a>
+                            <a href="#" class="menu-item">Kantin Modern</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Tentang Kampus</h3>
+                            <a href="#" class="menu-item">Sejarah Singkat</a>
+                            <a href="#" class="menu-item">Visi & Misi</a>
+                            <a href="#" class="menu-item">Struktur Organisasi</a>
+                            <a href="#" class="menu-item">Kontak Kami</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Unit Jaminan Mutu</h3>
+                            <a href="#" class="menu-item">Audit Mutu Internal (AMI)</a>
+                            <a href="#" class="menu-item">Monitoring dan Evaluasi (Monev)</a>
+                            <a href="#" class="menu-item">Pendampingan Akreditasi</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konten untuk Kemahasiswaan -->
+                <div data-menu="kemahasiswaan" class="mega-menu-content hidden opacity-0 transition-opacity duration-300">
+                    <div class="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Info Beasiswa</h3>
+                            <a href="#" class="menu-item">Beasiswa Internal STB</a>
+                            <a href="#" class="menu-item">Beasiswa Kemendikbud</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Alumni</h3>
+                            <a href="#" class="menu-item">Tracer Study</a>
+                            <a href="#" class="menu-item">Ikatan Alumni</a>
+                            <a href="#" class="menu-item">Lowongan Kerja</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Himpunan Mahasiswa</h3>
+                            <a href="#" class="menu-item">HMTIKA</a>
+                            <a href="#" class="menu-item">HIMASI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konten untuk Beasiswa -->
+                <div data-menu="beasiswa" class="mega-menu-content hidden opacity-0 transition-opacity duration-300">
+                    <div class="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Jenis Beasiswa</h3>
+                            <a href="#" class="menu-item">Beasiswa Prestasi Akademik</a>
+                            <a href="#" class="menu-item">Beasiswa Bantuan Finansial</a>
+                            <a href="#" class="menu-item">Beasiswa KIP-Kuliah</a>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg pb-6">Prosedur Pendaftaran</h3>
+                            <a href="#" class="menu-item">Syarat dan Ketentuan</a>
+                            <a href="#" class="menu-item">Jadwal Seleksi</a>
+                            <a href="#" class="menu-item">Pengumuman Hasil</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Halaman untuk Demo Scrolling -->
+    <main class="container mx-auto px-4 py-12">
+       
+        <div class="h-[200vh] mt-10 pt-10">
+            <!-- Konten halaman Anda dapat ditambahkan di sini. Area ini sengaja dibuat panjang agar Anda bisa melihat efek 'sticky' pada navbar saat scroll. -->
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            const navItems = document.querySelectorAll('.nav-item-with-dropdown');
+            const backdrop = document.getElementById('mega-menu-backdrop');
+            const menuContents = document.querySelectorAll('.mega-menu-content');
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            let menuTimeout;
+
+            // Fungsi untuk menampilkan menu
+            const showMenu = (targetId) => {
+                clearTimeout(menuTimeout);
+                
+                // Tampilkan backdrop
+                backdrop.style.height = '400px'; // Atur tinggi sesuai kebutuhan
+                backdrop.style.opacity = '1';
+
+                // Sembunyikan semua konten menu terlebih dahulu
+                menuContents.forEach(content => {
+                    content.classList.add('hidden', 'opacity-0');
+                });
+                
+                // Tampilkan konten yang sesuai
+                const activeContent = document.querySelector(`.mega-menu-content[data-menu="${targetId}"]`);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                    // Tambahkan delay kecil agar transisi opacity terlihat
+                    setTimeout(() => {
+                         activeContent.classList.remove('opacity-0');
+                    }, 50);
+                }
+            };
+
+            // Fungsi untuk menyembunyikan menu
+            const hideMenu = () => {
+                menuTimeout = setTimeout(() => {
+                    backdrop.style.height = '0';
+                    backdrop.style.opacity = '0';
+                    menuContents.forEach(content => {
+                        content.classList.add('hidden', 'opacity-0');
+                    });
+                }, 200); // Delay sebelum menu menghilang
+            };
+
+            // Event listener untuk setiap item menu
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const targetId = item.getAttribute('data-target');
+                    showMenu(targetId);
+                });
+            });
+
+            // Event listener untuk saat kursor meninggalkan area header
+            header.addEventListener('mouseleave', () => {
+                hideMenu();
+            });
+            
+            // Mencegah menu tertutup saat kursor berada di atas konten menu
+            document.getElementById('mega-menu-container').addEventListener('mouseenter', () => {
+                clearTimeout(menuTimeout);
+            });
+
+
+            // --- Logika untuk Hamburger Menu (dari kode Anda) ---
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('hamburger-active');
+                    navMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Tutup menu mobile saat link di-klik
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (hamburger.classList.contains('hamburger-active')) {
+                        hamburger.classList.remove('hamburger-active');
+                        navMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // --- Logika untuk Counter (jika ada di halaman) ---
+            // Saya menyimpannya di sini jika Anda membutuhkannya di bagian lain halaman.
+            const statsSection = document.querySelector('.stats-section'); // Ganti dengan selector yang benar
+            if(statsSection) {
+                // kode counter Anda...
+            }
+        });
+
+        // Kustomisasi style untuk link menu
+        // Anda bisa memindahkan ini ke tag <style> di <head> jika lebih suka
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = `
+            .nav-link {
+                @apply block lg:inline-block relative py-2 text-white/80 hover:text-white transition-colors duration-300 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-full;
+            }
+            .menu-item {
+                 @apply block pb-3 text-slate-400 hover:text-blue-400 transition-colors duration-200;
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+    </script>
+</body>
+</html>
+
