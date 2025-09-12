@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-24">
+                    <nav class="w-full lg:w-auto flex items-center text-center justify-center">
+                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 p-6 lg:p-0 justify-center">
+                            <!-- Program Studi Dropdown -->
+                            <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Program Studi
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Sarjana (S1)</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Kalender Akademik</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2025/2026</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2026/2027</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Download Dokumen</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmiah</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skripsi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Profile Perguruan Tinggi Dropdown -->
+                            <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Profil
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[900px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Fasilitas</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Laboratorium Komputer</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Perpustakaan Digital</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Ruang Kelas Multimedia</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Koneksi Internet Cepat</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kantin Modern</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Tentang Kampus</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Sejarah Singkat</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Visi & Misi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Struktur Organisasi</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Kontak Kami</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Unit Jaminan Mutu</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                             <!-- Kemahasiswaan Dropdown -->
+                             <li class="relative group w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Kemahasiswaan
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Info Beasiswa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Internal STB</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Kemendikbud</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Alumni</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tracer Study</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Ikatan Alumni</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lowongan Kerja</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Himpunan Mahasiswa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Beasiswa -->
+                            <li class="w-full lg:w-auto">
+                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
+                                    Beasiswa
+                                </a>
+                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
+                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                                        <div>
+                                            <h3 class="font-bold pb-6">Info Beasiswa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Internal STB</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Kemendikbud</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Alumni</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Tracer Study</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Ikatan Alumni</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">Lowongan Kerja</a>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold pb-6">Himpunan Mahasiswa</h3>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
+                                            <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+</body>
+</html>

@@ -62,7 +62,6 @@
        <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
             background-color: #0f172a;
             color: #ffffff;
         }
@@ -101,160 +100,271 @@
 </head>
 <body class="font-poppins">
 
-    <!-- Header Section -->
-    <header class="fixed z-50 top-0 left-0 w-full bg-slate-950/80 backdrop-blur-xl border-b border-white/20 shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-3 text-base md:text-lg">
-                
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="#" class="flex items-center space-x-2">
-                        <span class="text-blue-500 font-extrabold text-lg md:text-xl leading-tight">STIMIK <br>
-                            <span class="text-white font-normal">Tunas Bangsa</span>
-                        </span>
-                    </a>
+    <!-- Kontainer Navigasi -->
+    <div>
+    <nav class="fixed z-50 w-full bg-slate-950/80 backdrop-blur-xl border-b border-white/20 shadow-lg text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between h-20">
+            
+            <!-- Logo -->
+            <div class="text-xl">
+                <p class="font-bold size-4 text-blue-400 mb-2">STIMIK</p>
+                <p>TunasBangsa</p>
+            </div>
+
+                <!-- Bagian Tengah: Menu Utama (Desktop) -->
+                <div class="hidden md:block ">
+                    <ul class="ml-10 flex items-baseline space-x-4">
+                        <li><a href="#" class="text-white/50 hover:text-blue-600 px-3 py-2 rounded-md font-medium">PMB</a></li>
+
+                        <!-- Dropdown: PROFILE -->
+                        <li class="relative group" data-dropdown>
+                            <button type="button" data-dropdown-toggle class="flex items-center text-white/50 hover:text-blue-600 px-3 py-2 rounded-md font-medium">
+                                <span>Profil</span>
+                                <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div data-dropdown-menu class="dropdown-menu hidden absolute mt-2 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none opacity-0 transform scale-95 ">
+                                <div class="py-1 bg-indigo-700" role="none">
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Visi & Misi</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Sejarah</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Struktur Organisasi</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Fasilitas</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Dosen & Staff</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Kerjasama</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Dropdown Mega Menu: AKADEMIK -->
+                        <li class="relative group" data-dropdown>
+                             <button type="button" data-dropdown-toggle class="flex items-center text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                                <span>Akademik</span>
+                                <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div data-dropdown-menu class="dropdown-menu hidden absolute -left-1/2 transform translate-x-1/4 mt-2 w-screen max-w-md rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 scale-95">
+                                <div class="p-6">
+                                    <div class="grid gap-6">
+                                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                             <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Prodi Informatika</p>
+                                                <p class="mt-1 text-sm text-gray-500">Jelajahi kurikulum dan prospek karir.</p>
+                                            </div>
+                                        </a>
+                                         <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" /></svg>
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Prodi Sistem Informasi</p>
+                                                <p class="mt-1 text-sm text-gray-500">Fokus pada manajemen dan teknologi informasi.</p>
+                                            </div>
+                                        </a>
+                                         <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                            <div class="ml-4">
+                                                <p class="text-base font-medium text-gray-900">Kalender Akademik</p>
+                                                <p class="mt-1 text-sm text-gray-500">Lihat jadwal penting selama perkuliahan.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mt-6">
+                                        <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+                                            Download Dokumen
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Dropdown: KEMAHASISWAAN -->
+                        <li class="relative group" data-dropdown>
+                            <button type="button" data-dropdown-toggle class="flex items-center text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+                                <span>Kemahasiswaan</span>
+                                <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div data-dropdown-menu class="dropdown-menu hidden absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none opacity-0 transform scale-95">
+                                <div class="py-1" role="none">
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">ORMAWA/UKM</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Beasiswa</a>
+                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Alumni</a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Berita</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Pengumuman</a></li>
+                    </ul>
                 </div>
 
-                <!-- Hamburger Button for mobile -->
-                <div class="">
-                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4">
-                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
-                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                <!-- Bagian Kanan: Tombol Aksi -->
+                <div class="hidden md:block border inset-y-0 right-0">
+                     <div class="flex items-center md:ml-6">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium mr-4">Kontak</a>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            Log In
+                        </a>
+                     </div>
+                </div>
+                
+                <!-- Tombol Menu Mobile -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Buka menu utama</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
-                
-                <!-- Navigation Menu -->
-                <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-24">
-                    <nav class="w-full lg:w-auto flex items-center text-center justify-center">
-                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 p-6 lg:p-0 justify-center">
-                            <!-- Program Studi Dropdown -->
-                            <li class="relative group w-full lg:w-auto">
-                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Program Studi
-                                </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
-                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-                                        <div>
-                                            <h3 class="font-bold pb-6">Sarjana (S1)</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Informatika</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Sistem Informasi</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Kalender Akademik</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2024/2025</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2025/2026</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tahun ajaran 2026/2027</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Download Dokumen</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat dispensasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Surat rekomendasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Jurnal ilmiah</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Draft skripsi</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!-- Profile Perguruan Tinggi Dropdown -->
-                            <li class="relative group w-full lg:w-auto">
-                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Profil
-                                </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[900px] rounded-lg">
-                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-                                        <div>
-                                            <h3 class="font-bold pb-6">Fasilitas</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Laboratorium Komputer</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Perpustakaan Digital</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Ruang Kelas Multimedia</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Koneksi Internet Cepat</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Kantin Modern</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Tentang Kampus</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Sejarah Singkat</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Visi & Misi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Struktur Organisasi</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Kontak Kami</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Unit Jaminan Mutu</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Audit Mutu Internal (AMI)</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Monitoring dan Evaluasi (Monev)</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Pendampingan Akreditasi</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                             <!-- Kemahasiswaan Dropdown -->
-                             <li class="relative group w-full lg:w-auto">
-                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Kemahasiswaan
-                                </a>
-                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
-                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-                                        <div>
-                                            <h3 class="font-bold pb-6">Info Beasiswa</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Internal STB</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Kemendikbud</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Alumni</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tracer Study</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Ikatan Alumni</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lowongan Kerja</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Himpunan Mahasiswa</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!-- Beasiswa -->
-                            <li class="w-full lg:w-auto">
-                                <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
-                                    Beasiswa
-                                </a>
-                                                                <div class="relative lg:absolute top-full mt-4 lg:mt-10 text-white group-hover:bg-gray-900 group-hover:border group-hover:border-white/30 shadow-lg opacity-0 invisible -translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 w-full lg:w-[700px] rounded-lg">
-                                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
-                                        <div>
-                                            <h3 class="font-bold pb-6">Info Beasiswa</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Internal STB</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Beasiswa Kemendikbud</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Alumni</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Tracer Study</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Ikatan Alumni</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">Lowongan Kerja</a>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-bold pb-6">Himpunan Mahasiswa</h3>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">HMTIKA</a>
-                                            <a href="#" class="block pb-3 hover:text-blue-500">HIMASI</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <!-- Login and Sign -->
-                <div class="" id="btn-login">
-                    <a href="#" class="border m-2 py-2 px-4 rounded-full border-slate-50/25 hover:border-slate-50 transition-all duration-100 ease-in">Masuk</a>
-                    <a href="#" class="m-2 py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-400 transition-all duration-100 ease-in">Daftar</a>
-                </div>
-
             </div>
         </div>
-    </header>
+
+        <!-- Menu Mobile, muncul/hilang berdasarkan state -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-2 sm:px-3">
+                <a href="#" class="text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-semibold">PMB</a>
+                
+                <!-- Accordion: Profil -->
+                <div>
+                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-semibold">
+                        <span>Profil</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu mt-1 pl-6">
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Visi & Misi</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Sejarah</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Struktur Organisasi</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Fasilitas</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Dosen & Staff</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Kerjasama</a>
+                    </div>
+                </div>
+                 <!-- Accordion: Akademik -->
+                <div>
+                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-semibold">
+                        <span>Akademik</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu mt-1 pl-6">
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Prodi Informatika</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Prodi Sistem Informasi</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Kalender Akademik</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Download Dokumen</a>
+                    </div>
+                </div>
+                 <!-- Accordion: Kemahasiswaan -->
+                <div>
+                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-semibold">
+                        <span>Kemahasiswaan</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="mobile-submenu mt-1 pl-6">
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">ORMAWA/UKM</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Beasiswa</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Alumni</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-semibold">Berita</a>
+                <a href="#" class="text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-semibold">Pengumuman</a>
+                <a href="#" class="text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-semibold">Kontak</a>
+            </div>
+             <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="flex items-center px-5">
+                     <a href="#" class="w-full text-center inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        Log In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Logika untuk Dropdown Desktop ---
+            const dropdowns = document.querySelectorAll('[data-dropdown]');
+
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('[data-dropdown-toggle]');
+                const menu = dropdown.querySelector('[data-dropdown-menu]');
+
+                toggle.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    // Tutup semua dropdown lain sebelum membuka yang ini
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            const otherMenu = otherDropdown.querySelector('[data-dropdown-menu]');
+                            otherMenu.classList.add('hidden', 'opacity-0', 'scale-95');
+                        }
+                    });
+                    
+                    // Toggle dropdown saat ini
+                    menu.classList.toggle('hidden');
+                    setTimeout(() => {
+                        menu.classList.toggle('opacity-0');
+                        menu.classList.toggle('scale-95');
+                    }, 10); // Penundaan kecil agar transisi berjalan
+                });
+            });
+
+            // Menutup dropdown jika mengklik di luar area menu
+            window.addEventListener('click', function (e) {
+                dropdowns.forEach(dropdown => {
+                    const menu = dropdown.querySelector('[data-dropdown-menu]');
+                    if (!menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden', 'opacity-0', 'scale-95');
+                    }
+                });
+            });
+
+            // --- Logika untuk Menu Mobile ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icons = mobileMenuButton.querySelectorAll('svg');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                icons[0].classList.toggle('hidden');
+                icons[1].classList.toggle('hidden');
+            });
+
+            // --- Logika untuk Accordion Mobile ---
+            const accordionToggles = document.querySelectorAll('[data-mobile-accordion-toggle]');
+            
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('svg');
+
+                    // Tutup accordion lain yang terbuka
+                    accordionToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            otherToggle.nextElementSibling.classList.remove('open');
+                            otherToggle.querySelector('svg').classList.remove('rotate-180');
+                        }
+                    });
+
+                    submenu.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+</header>
 
     <main>
         <!-- Hero Section -->
@@ -267,10 +377,11 @@
                 <p class="text-base sm:text-lg text-slate-300 max-w-md sm:max-w-xl md:max-w-3xl mx-auto mb-8 md:mb-10">
                     Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 ">
-                    <button class="w-full sm:w-auto relative border border-white/20 rounded-full p-3 px-8 overflow-hidden bg-blue-600 text-white font-semibold group hover:bg-blue-500 hover:border-blue-400 transition-all duration-200 ease-in">
-                        <span>Daftar Sekarang</span>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+                    <button class="px-8 p-3 w-full sm:w-auto relative rounded-full text-white border border-sky-200/25 font-semibold bg-gradient-to-r from-blue-800 via-blue-700 to-indigo-800 bg-[length:200%_200%] transition-all duration-700 ease-out hover:bg-[position:100%_0%]">
+                    Daftar Sekarang
                     </button>
+
                     <button class="w-full sm:w-auto border-2 border-slate-500 p-3 px-6 rounded-full hover:bg-slate-800 hover:border-white transition-colors flex items-center justify-center gap-2 duration-200 ease-in">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
                           <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -281,6 +392,8 @@
                 </div>
             </div>
         </section>
+        <div class="absolute top-20 -left-20 w-96 h-72 bg-blue-600 rounded-full blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 -right-20 size-96 bg-indigo-500 rounded-full blur-3xl opacity-30"></div>
 
         <!-- Video Preview Section -->
         <section class="container mx-auto px-4">
@@ -323,25 +436,53 @@
         </section>
 
         <!-- Sponsor Logos Section -->
-        <section class="w-full py-4 my-8 bg-white">
-            <div class="relative flex overflow-hidden group">
-                <div class="flex animate-scroll group-hover:[animation-play-stat]">
-                    <img src="./asset/adidas.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/bear.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/disney.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/gillet.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/google.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/LimaTech.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/nike.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/NovaTech.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/Play.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/tiger.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/polpo.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/under.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
-                    <img src="./asset/x.jpg" alt="Sponsor Logo" class="w-12 mx-8 hover:opacity-100 transition-all">
-                </div>
-            </div>
-        </section>
+<section class="w-full py-4 my-8 bg-white">
+  <div class="relative flex overflow-hidden group">
+    <!-- Track yang berisi logo -->
+    <div class="flex animate-marquee group-hover:[animation-play-state:paused]">
+      <img src="./asset/adidas.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/bear.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/disney.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/gillet.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/google.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/LimaTech.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/nike.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/NovaTech.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/tiger.png" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/polpo.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/under.jpg" alt="Sponsor Logo" class="h-12 mx-8 hover:opacity-100 transition-all">
+      <img src="./asset/x.jpg" alt="Sponsor Logo" class="w-12 mx-8 hover:opacity-100 transition-all">
+
+      <!-- Duplikat supaya looping halus -->
+      <img src="./asset/adidas.png" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/bear.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/disney.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/gillet.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/google.png" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/LimaTech.png" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/nike.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/NovaTech.png" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/tiger.png" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/polpo.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/under.jpg" alt="Sponsor Logo" class="h-12 mx-8">
+      <img src="./asset/x.jpg" alt="Sponsor Logo" class="w-12 mx-8">
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+</style>
+
 
         <!-- Explore Campus Section -->
         <section class="py-20 bg-slate-950 grid-cols-4">

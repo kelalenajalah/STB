@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+  <section class="flex flex-col items-center justify-center py-10 bg-gray-900 text-white">
+  <!-- Video YouTube -->
+  <div class="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-lg">
+    <iframe id="youtubeVideo"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/ZZEOrnnfmWw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Tombol Pilihan -->
+  <div class="flex flex-wrap justify-center gap-4 mt-6">
+    <button class="px-5 py-2 bg-gray-800 rounded-full hover:bg-blue-600 transition" 
+            onclick="changeVideo('ZZEOrnnfmWw')">
+      Matematika Diskrit
+    </button>
+    <button class="px-5 py-2 bg-gray-800 rounded-full hover:bg-blue-600 transition" 
+            onclick="changeVideo('AI')">
+      AI & Machine Learning
+    </button>
+    <button class="px-5 py-2 bg-gray-800 rounded-full hover:bg-blue-600 transition" 
+            onclick="changeVideo('webDev')">
+      Web Development
+    </button>
+    <button class="px-5 py-2 bg-gray-800 rounded-full hover:bg-blue-600 transition" 
+            onclick="changeVideo('Cyber')">
+      Cyber Security
+    </button>
+    <button class="px-5 py-2 bg-gray-800 rounded-full hover:bg-blue-600 transition" 
+            onclick="changeVideo('mobileDev')">
+      Mobile Programming
+    </button>
+  </div>
+</section>
+
+<script>
+  function changeVideo(videoId) {
+    const iframe = document.getElementById("youtubeVideo");
+    iframe.src = `https://www.youtube.com/embed/${videoId}`;
+  }
+  function changeVideo(AI) {
+    const iframe = document.getElementById("youtubeVideo");
+    iframe.src = `https://www.youtube.com/embed/4urHsPnoLxU?si=D4S8nPY4_AcqtYuQ/${AI}`;
+  }
+  function changeVideo(webDev) {
+    const iframe = document.getElementById("youtubeVideo");
+  }
+</script>
+
+
+</body>
+</html>
