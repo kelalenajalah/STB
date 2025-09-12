@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STIMIK Tunas Bangsa</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="./js/script.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -125,9 +125,9 @@
                 </div>
                 
                 <!-- Navigation Menu -->
-                <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-12">
-                    <nav class="w-full lg:w-auto block items-center ">
-                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 p-6 lg:p-0">
+                <div id="nav-menu" class="hidden absolute lg:relative top-full w-full lg:w-auto bg-slate-950 lg:bg-transparent lg:flex lg:items-center justify-center items-center xl:flex xl:mx-auto gap-x-24">
+                    <nav class="w-full lg:w-auto flex items-center text-center justify-center">
+                        <ul class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 p-6 lg:p-0 justify-center">
                             <!-- Program Studi Dropdown -->
                             <li class="relative group w-full lg:w-auto">
                                 <a href="#" class="block lg:inline-block relative py-2 before:content-[''] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[3px] before:bg-white before:transition-all before:duration-300 hover:before:w-full">
@@ -248,7 +248,7 @@
 
                 <!-- Login and Sign -->
                 <div class="" id="btn-login">
-                    <a href="#" class="border m-2 py-2 px-4 rounded-full border-slate-50/25">Masuk</a>
+                    <a href="#" class="border m-2 py-2 px-4 rounded-full border-slate-50/25 hover:border-slate-50 transition-all duration-100 ease-in">Masuk</a>
                     <a href="#" class="m-2 py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-400 transition-all duration-100 ease-in">Daftar</a>
                 </div>
 
@@ -262,7 +262,7 @@
             <div class="container mx-auto px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 md:mb-8 leading-tight">
                     Mau Jadi Ahli Teknologi? <br>
-                    <strong class="text-blue-500">STIMIK </strong>Jawabannya, Yuk Daftar!
+                    <b class="text-blue-500 font font-bold"> STIMIK </b>Jawabannya, Yuk Daftar!
                 </h1>
                 <p class="text-base sm:text-lg text-slate-300 max-w-md sm:max-w-xl md:max-w-3xl mx-auto mb-8 md:mb-10">
                     Bergabunglah dengan kami untuk meraih masa depan cerah di dunia teknologi. Kurikulum terdepan, dosen ahli, dan fasilitas lengkap menanti Anda.
@@ -286,16 +286,14 @@
         <section class="container mx-auto px-4">
             <div class="relative bg-sky-9040 border-slate-700 mx-auto rounded-2xl md:rounded-3xl">
                 <div class="relative flex items-center object-cover w-full rounded-2xl md:rounded-3xl h-[250px] sm:h-[400px] md:h-[550px] lg:h-[700px]">    
-                    <iframe 
-                    src="https://youtu.be/nAz0SeVHZzA?si=XKVPzlPssq8UvgMR" 
-                    class="w-full h-full rounded-3xl"
+                <iframe 
+                    src="https://www.youtube.com/embed/g9IAikCh1RI" 
+                    title="YouTube video player" 
+                    class="w-full h-full rounded-3xl" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
-                    </iframe>
-                    <!-- <button class="absolute z-10 border rounded-full border-white/50 transition-transform duration-300 ease-out hover:scale-110 bg-black/30 backdrop-blur-sm">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 p-2">
-                          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
-                        </svg>
-                    </button> -->
+                </iframe>
                 </div>
             </div>
             <div class="py-5">
@@ -520,7 +518,7 @@
 
         <!-- Student Organizations Section -->
         <section class="bg-black py-16 md:py-20">
-            <div class="container mx-auto px-4 items-center text-center">
+            <div class="container mx-auto px-4 items-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8">Organisasi & Unit Kegiatan Mahasiswa</h2>
                 <p class="text-slate-400 max-w-3xl mx-auto mb-12">
                     Kembangkan soft skill, perluas jaringan, dan salurkan minat bakatmu melalui berbagai Unit Kegiatan Mahasiswa (UKM) dan organisasi yang ada di STIMIK Tunas Bangsa.
@@ -529,7 +527,7 @@
                 <!-- Cards Section -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     <!-- BEM Card -->
-                    <div class="bg-black p-6 rounded-lg border border-slate-700 flex flex-col transition-all hover:bg-slate-900 duration-300 ease-out hover:-translate-y-2 shadow-slate-800 shadow-xl">
+                    <div class="bg-gray-950 p-6 rounded-lg border border-white/10 flex flex-col transition-all duration-300 ease-out hover:-translate-y-2 shadow-xl hover:border-white/50">
                         <h3 class="text-xl font-bold">BEM</h3>
                         <div class="my-4 rounded-xl overflow-hidden h-48">
                             <img src="https://i.pinimg.com/736x/e2/b6/0f/e2b60fe47bce4110f6b8142f98ef661f.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/ffffff?text=BEM';" alt="Badan Eksekutif Mahasiswa" class="w-full h-full object-cover">
@@ -563,9 +561,11 @@
                 </div>
 
         <!-- "Temukan Lainya" Button -->
-        <button id="show-more-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full mb-12 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50 animate-bounce">
-            Temukan Lainya...
-        </button>
+         <div class="items-center text-center">
+             <button id="show-more-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full mb-12 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50 animate-bounce">
+                 Temukan Lainya...
+             </button>
+         </div>
 
         <!-- More Content Section (Hidden by default) -->
         <div id="more-content" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 text-left">
@@ -834,7 +834,7 @@
         </div>
     </footer>
 
-    <script>
+  <script>
         // JavaScript for Hamburger Menu Toggle
         document.addEventListener('DOMContentLoaded', () => {
             const hamburger = document.getElementById('hamburger');
@@ -901,19 +901,6 @@
                 observer.observe(statsSection);
             }
         });
-            const btn = document.getElementById('moreBtn');
-    const menu = document.getElementById('moreMenu');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    // Tutup menu jika klik di luar
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.add('hidden');
-      }
-    });
     </script>
 </body>
 </html>
