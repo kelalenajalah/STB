@@ -102,40 +102,47 @@
 
     <!-- Kontainer Navigasi -->
     <div>
-    <nav class="fixed z-50 w-full bg-slate-950/80 backdrop-blur-xl border-b border-white/20 shadow-lg text-white">
-        <div class="max-w-7xl mx-auto">
+    <nav class="fixed z-50 w-full bg-slate-950 shadow-lg text-white">
+        <div class="">
             <div class="flex items-center justify-between h-20">
             
             <!-- Logo -->
-            <div class="text-xl">
+            <div class="pl-4 text-xl">
                 <p class="font-bold size-4 text-blue-400 mb-2">STIMIK</p>
                 <p>TunasBangsa</p>
             </div>
 
-                <!-- Bagian Tengah: Menu Utama (Desktop) -->
-                <div class="hidden md:block ">
-                    <ul class="ml-10 flex items-baseline space-x-4">
-                        <li><a href="#" class="text-white/50 hover:text-blue-600 px-3 py-2 rounded-md font-medium">PMB</a></li>
+            <!-- Bagian Tengah: Menu Utama (Desktop) -->
+            <div class="hidden pl-4 md:block md:text-white">
+                <ul class="ml-10 flex items-baseline space-x-4">
+                    <li><a href="#" class="text-white/50 hover:text-white font-semibold text-lg px-3 py-2 rounded-md">PMB</a></li>
 
-                        <!-- Dropdown: PROFILE -->
-                        <li class="relative group" data-dropdown>
-                            <button type="button" data-dropdown-toggle class="flex items-center text-white/50 hover:text-blue-600 px-3 py-2 rounded-md font-medium">
-                                <span>Profil</span>
-                                <svg class="ml-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <div data-dropdown-menu class="dropdown-menu hidden absolute mt-2 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none opacity-0 transform scale-95 ">
-                                <div class="py-1 bg-indigo-700" role="none">
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Visi & Misi</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Sejarah</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Struktur Organisasi</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Fasilitas</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Dosen & Staff</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Kerjasama</a>
-                                </div>
-                            </div>
-                        </li>
+                
+            <!-- Accordion: Profil -->
+            <div class="relative group inline-block">
+            <button class="flex items-center justify-between text-white/50 hover:text-white px-4 py-2 rounded-md transition">
+                <span class="font-semibold text-lg">Profil</span>
+                <svg class="w-5 h-5 ml-1 transform group-hover:rotate-180 transition-transform duration-300" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" 
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <!-- Dropdown Full Layar -->
+                <div class="fixed left-0 right-0 top-[px] hidden group-hover:flex bg-slate-950 shadow-lg border-t border-white/10 py-6 px-12 z-50">
+                    <div class="flex justify-center w-full space-x-12">
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Visi & Misi</a>
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Sejarah</a>
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Struktur Organisasi</a>
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Fasilitas</a>
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Dosen & Staff</a>
+                    <a href="#" class="text-gray-700 hover:text-white font-semibold text-lg">Kerjasama</a>
+                    </div>
+                </div>
+            </div>
 
                         <!-- Dropdown Mega Menu: AKADEMIK -->
                         <li class="relative group" data-dropdown>
@@ -202,18 +209,49 @@
                 </div>
 
                 <!-- Bagian Kanan: Tombol Aksi -->
-                <div class="hidden md:block border inset-y-0 right-0">
-                     <div class="flex items-center md:ml-6">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 font-medium mr-4">Kontak</a>
-                        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-                            Log In
-                        </a>
-                     </div>
+                <div class="hidden md:flex items-center inset-y-0 right-12 bg-blue-700/10 border border-white/20 rounded-full px-4 py-2 shadow-sm">
+                <!-- Ikon Search -->
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="h-5 w-5 text-gray-300" 
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.5 10.5a7.5 7.5 0 0013.15 6.15z" />
+                </svg>
+
+                <!-- Input -->
+                <input id="searchInput"
+                        type="text" 
+                        placeholder="Temukan lainnya..."
+                        class="ml-2 bg-transparent text-white placeholder-gray-400 focus:outline-none w-48 focus:w-64 transition-all duration-300 ease-in-out">
+
+                <!-- Tombol Clear -->
+                <button id="clearBtn" 
+                        class="ml-2 text-gray-400 hover:text-white hidden">
+                    ✖
+                </button>
                 </div>
+
+                <script>
+                const searchInput = document.getElementById("searchInput");
+                const clearBtn = document.getElementById("clearBtn");
+
+                // tampilkan tombol clear kalau ada teks
+                searchInput.addEventListener("input", () => {
+                    clearBtn.style.display = searchInput.value ? "block" : "none";
+                });
+
+                // hapus teks saat tombol clear diklik
+                clearBtn.addEventListener("click", () => {
+                    searchInput.value = "";
+                    clearBtn.style.display = "none";
+                    searchInput.focus();
+                });
+                </script>
+
                 
                 <!-- Tombol Menu Mobile -->
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" id="mobile-menu-button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                <div class="mr-24 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Buka menu utama</span>
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -230,37 +268,20 @@
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 sm:px-3">
                 <a href="#" class="text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-semibold">PMB</a>
-                
-                <!-- Accordion: Profil -->
-                <div>
-                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-semibold">
-                        <span>Profil</span>
-                        <svg class="w-5 h-5 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div class="mobile-submenu mt-1 pl-6">
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Visi & Misi</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Sejarah</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Struktur Organisasi</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Fasilitas</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Dosen & Staff</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Kerjasama</a>
-                    </div>
-                </div>
+
                  <!-- Accordion: Akademik -->
                 <div>
-                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-semibold">
+                    <button data-mobile-accordion-toggle class="w-full flex items-center justify-between text-white/50 hover:text-white px-3 py-2 rounded-md text-base font-semibold">
                         <span>Akademik</span>
                         <svg class="w-5 h-5 transform transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                           <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </button>
                     <div class="mobile-submenu mt-1 pl-6">
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Prodi Informatika</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Prodi Sistem Informasi</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Kalender Akademik</a>
-                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-sm">Download Dokumen</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md">Prodi Informatika</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md">Prodi Sistem Informasi</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md">Kalender Akademik</a>
+                        <a href="#" class="text-gray-600 hover:bg-gray-100 block px-3 py-2 rounded-md">Download Dokumen</a>
                     </div>
                 </div>
                  <!-- Accordion: Kemahasiswaan -->
@@ -411,7 +432,7 @@
             </div>
             <div class="py-5">
                 <div class="p-4 mx-auto w-full max-w-6xl flex flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center font-semibold">
-                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-gray-800 hover:text-slate-900 group text-sm sm:text-base">
+                    <button class="relative border border-white/20 rounded-full p-2 px-4 sm:p-3 sm:px-5 overflow-hidden bg-blue-800 hover:text-slate-900 group text-sm sm:text-base">
                         <span class="relative z-10 group-hover:text-black">Matematika Diskrit</span>
                         <span class="absolute inset-0 bg-white translate-y-full scale-x-0 rounded-full group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out"></span>
                     </button>
@@ -524,20 +545,7 @@
                             <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
                         </div>
                     </div>
-                    <!-- Card 5 -->
-                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
-                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
-                        </div>
-                    </div>
-                    <!-- Card 5 -->
-                     <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
-                        <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                            <h3 class="text-white text-2xl font-bold">Kisah Sukses Alumni</h3>
-                        </div>
-                    </div>
+
                     <!-- Card 5 -->
                      <div class="relative rounded-lg overflow-hidden group h-30 hover:scale-105 transition-transform duration-300">
                         <img src="https://i.pinimg.com/736x/fb/52/6a/fb526a2feab39d538de13ec247052914.jpg" alt="Kisah Sukses Alumni" class="w-full h-full object-cover group-hover:scale-120 transition-transform duration-500">
@@ -703,7 +711,7 @@
 
         <!-- "Temukan Lainya" Button -->
          <div class="items-center text-center">
-             <button id="show-more-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full mb-12 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-500/50 animate-bounce">
+             <button id="show-more-button" class="gradient-button text-white font-semibold py-3 px-8 rounded-full mb-12 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-slate/50 animate-bounce">
                  Temukan Lainya...
              </button>
          </div>
